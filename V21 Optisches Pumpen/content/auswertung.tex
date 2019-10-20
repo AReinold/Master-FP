@@ -3,7 +3,7 @@
 Zuerst wird die Stärke des gesamten Horizontal-Magnetfeldes aus der Abhängigkeit mit der Resonanzfrequenz für die beiden Rubidium-Isotope \ce{^{85}Rb} und \ce{^{87}Rb} bestimmt.
 Das Magnetfeld besteht aus den Komponenten der Sweep-Spule und die der horizontalen Spule, die das Erdmagnetfeld in dieser Richtung kompensieren soll. Es besteht folgender Zusammenhang:
 \begin{equation}
-  B=B_\text{Sweep}+B_\text{Horizontal}
+  B=B_\text{Sweep}+B_\text{Horizontal}\,.
 \end{equation}
 Die Magnetfeldstärke $B$ ist aus der abgelesenen Stromstärke $I$ mithilfe des Zusammenhangs
 \begin{equation}
@@ -27,7 +27,7 @@ Für die beiden Resonanzstellen ergeben sich die folgenden Regressionsparameter:
   a_1 = a_2 &= \SI{8,9 \pm 1,6 e-10}{\frac{MHz}{T}} \\
   b_1 = b_2 &= \SI{-1,6 \pm 0,9 e-4}{T}\\
 \end{align*}
-Die Messwerte für $f_\text{RF}=\SI{1}{MHz}$ erforderten eine so große horitontale B-Feldkomponente, das dieser Wert für den Graph und die anschließende Ausgleichsrechnung außer Acht gelassen wird.
+Die Messwerte für $f_\text{RF}=\SI{1}{MHz}$ erforderten eine so große horitontale B-Feldkomponente, dass dieser Wert für den Graph und die anschließende Ausgleichsrechnung außer Acht gelassen wird. Aufgrund der nicht vorhandenen charakteristischen Abweichungen der beiden Resonanzen in den Regressionswerten und die Dominanz des Horizontalfeldes, lässt sich keine Zuordnung der beiden Isotope treffen.
 \begin{table}[h]
   \centering
   \caption{Resonanzpositionen abhängig von der RF-Frequenz.}
@@ -64,12 +64,12 @@ nach den Landé-Faktoren $g_F$ umgestellt. Mit dem Planckschen Wirkungsquantum $
   \Rightarrow g_{F_1}&= 0,081 \pm 0,015\\
   \Rightarrow g_{F_2}&= 0,080 \pm 0,014.
 \end{align*}
-Für die Berechnung des Kernspins wird als erstes der Faktor $g_J$ aus ???? bestimmt. Mit ??? lässt sich dann der Kernspin $I$ bestimmen. Mit $J,S=0,5,L=0$ QUELLE und Formel ???? ergibt sich sodann:
+Für die Berechnung des Kernspins wird als erstes der Faktor $g_J$ aus \eqref{eq:gj} bestimmt. Mit \eqref{eq:gf} lässt sich dann der Kernspin $I$ bestimmen. Mit $J,S=0,5,L=0$ \cite{anleitung} und dem Zusammenhang $\vec{F}=\vec{J}+\vec{I}$ ergibt sich sodann:
 \begin{align*}
   I_1&= 11,9\pm2,0\\
   I_2&=12,0\pm2,2.
 \end{align*}
-Im Vergleich zu den Literaturwerten QUELLE
+Im Vergleich zu den Literaturwerten \cite{rubidium}
 \begin{align*}
   \ce{^{85}Rb}&:\; I=\frac{5}{2}\\
   \ce{^{87}Rb}&:\; I=\frac{3}{2}
@@ -96,7 +96,7 @@ Mit den maximal gemessenen magnetischen Feldstärken für die erste Resonanzstel
   W_2&= \SI{3,6 \pm 1,6 e-9}{eV}.
 \end{align*}
 \subsection{Transiente Effekte}
-Die ansteigende Kurve ist in Abbildung \ref{fig:signal1} und ein typisches Signalbild einer abfallenden Kurve in Abbildung \ref{fig:signal2} gezeigt. Die Periodendauern der Oszillationen sind in Abbildung \ref{fig:periodendauern} grafisch dargestellt.
+Die ansteigenden Kurven für beide Isotope sind in Abbildung \ref{fig:signal1} gezeigt. Die Periodendauern der Oszillationen sind in Abbildung \ref{fig:resonanz} grafisch dargestellt.
 Eine hyperbolische Ausgleichsrechnung der Form
 \begin{equation}
   y=a+\frac{b}{x-c}
@@ -142,5 +142,5 @@ Dies entspricht einer Abweichung von $69,33\%$ von dem theoretischen Wert von 1,
     \label{sub-abb:85}
   \end{subfigure}
   \caption{Ansteigende Flanken der Periodendauern für beide Resonanzstellen entsprechend der Isotope.}
-  \label{abb:ansteigende-flanken}
+  \label{fig:signal1}
 \end{figure}
