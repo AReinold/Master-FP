@@ -13,7 +13,7 @@ berechnet worden. Hierbei ist $I$ der Strom, $N$ die Windungszahl der jeweiligen
 Abbildung \ref{fig:typSignalbild} zeigt einen typischen Signalverlauf. Zu sehen ist der tiefere Nullpunktspeak und die beiden Resonanzpeaks der Rubidium-Isotope.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{Bilder/typSignalbild.jpg}
+  \includegraphics[width=0.45\textwidth]{Bilder/typSignalbild.jpg}
   \caption{Fotografie eines typischen Signalverlaufs bei \SI{100}{kHz}.}
   \label{fig:typSignalbild}
 \end{figure}
@@ -89,3 +89,58 @@ Für das Isotopenverhältnis in der Natur gilt:
 \end{align*}
 Das Verhältnis des Isotopengeschmischs im Aufbau ist also um $26,3\%$ größer als in der Natur vorliegend.
 \subsection{Quadratischer Zeemann-Effekt}
+Für eine Abschätzung des quadratischen Zeemann-Effekts wird mit dem Zusammenhang \eqref{eq:quadratisch} die Energiedifferenz der Niveaus berechnet.
+Mit den maximal gemessenen magnetischen Feldstärken für die erste Resonanzstelle von $B=\SI{1088,78}{µT}$ und $B=\SI{1096,37}{µT}$ für die zweite, ergibt sich mit $m_F=3$ für \ce{^{85}Rb} und $m_F=2$ für \ce{^{87}Rb} und der entsprechenden Hyperfeinstrukturaufspaltung aus Formel \eqref{eq:thermisch} ergeben sich:
+\begin{align*}
+  W_1&= \SI{3,6 \pm 0,6 e-9}{eV}\\
+  W_2&= \SI{3,6 \pm 1,6 e-9}{eV}.
+\end{align*}
+\subsection{Transiente Effekte}
+Die ansteigende Kurve ist in Abbildung \ref{fig:signal1} und ein typisches Signalbild einer abfallenden Kurve in Abbildung \ref{fig:signal2} gezeigt. Die Periodendauern der Oszillationen sind in Abbildung \ref{fig:periodendauern} grafisch dargestellt.
+Eine hyperbolische Ausgleichsrechnung der Form
+\begin{equation}
+  y=a+\frac{b}{x-c}
+\end{equation}
+ist eingezeichnet.
+Für die Regressionsparameter der ersten Resonanz ergeben sich
+\begin{align*}
+  a_1&= \SI{0,033 \pm 0,014}{ms}\\
+  b_1&= \SI{4,47 \pm 0,14}{V ms}\\
+  c_1&= \SI{0,45 \pm 0,06}{V};
+\end{align*}
+für die der zweiten Resonanz
+\begin{align*}
+  a_2&= \SI{0,14 \pm 0,07}{ms}\\
+  b_2&= \SI{4,6 \pm 0,9}{V ms}\\
+  c_2&= \SI{-1,9 \pm 0,5}{V}.
+\end{align*}
+Daraus errechnet sich das Verhältnis von
+\begin{equation*}
+\frac{b_2}{b_1}=\frac{\ce{^{85}Rb}}{\ce{^{87}Rb}}=1,04 \pm 0,20
+\end{equation*}
+zwischen den Landé-Faktoren.
+Dies entspricht einer Abweichung von $69,33\%$ von dem theoretischen Wert von 1,5\cite{anleitung}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Berechnung/perioden.pdf}
+  \caption{Periodendauern der Oszillationen in ABhängigkeit der RF-Amplituden.}
+  \label{fig:resonanz}
+\end{figure}
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.46\textwidth}
+    \centering
+    \includegraphics[angle=90, width=\textwidth]{bilder/flanke1.jpg}
+    \caption{Ansteigende Flanke der Periodendauer für die erste Resonanzstelle.}
+    \label{sub-abb:87}
+  \end{subfigure}
+  \qquad
+  \begin{subfigure}{0.46\textwidth}
+    \centering
+    \includegraphics[angle=90, width=\textwidth]{bilder/flanke2.jpg}
+    \caption{Ansteigende Flanke der Periodendauer für die zweite Resonanzstelle.}
+    \label{sub-abb:85}
+  \end{subfigure}
+  \caption{Ansteigende Flanken der Periodendauern für beide Resonanzstellen entsprechend der Isotope.}
+  \label{abb:ansteigende-flanken}
+\end{figure}

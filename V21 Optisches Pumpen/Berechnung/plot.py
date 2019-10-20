@@ -86,8 +86,8 @@ print('Horizontalkomponente 2: ', bB2)
 print('')
 
 x = np.linspace(0, 0.9*10**6, 100000)
-plt.plot(RFfrequenz, B1, 'C0x', markersize=10, fillstyle='none', label="Erstes Isotop")
-plt.plot(x, linear(x, *paramsB1), 'C0-', label="Regression 1")
+plt.plot(RFfrequenz, B1, 'C2x', markersize=10, fillstyle='none', label="Erstes Isotop")
+plt.plot(x, linear(x, *paramsB1), 'C2-', label="Regression 1")
 plt.plot(RFfrequenz, B2, 'C3x', markersize=10, fillstyle='none', label="Zweites Isotop")
 plt.plot(x, linear(x, *paramsB2), 'C3--', label="Regression 2")
 plt.xticks([0, 200000, 400000, 600000, 800000], ['0', '0.2', '0.4', '0.6', '0.8'])
@@ -113,53 +113,52 @@ print('Kernspin 2:', I2)
 print('')
 # calculate nuclear spin
 
-# amplitude, periode1, periode2 = np.genfromtxt('Auswertung/Daten/daten_periode.txt', unpack=True)
-#
-# # scale to ms
-# periode1 = periode1*10**(-3)
-# periode2 = periode2*10**(-3)
-#
-# # fit for first period
-# paramsPeriode1, covPeriode1 = curve_fit(hyperbel, amplitude[1:], periode1[1:])
-# errorsPeriode1 = np.sqrt(np.diag(covPeriode1))
-# aPeriode1 = ufloat(paramsPeriode1[0], errorsPeriode1[0])
-# bPeriode1 = ufloat(paramsPeriode1[1], errorsPeriode1[1])
-# cPeriode1 = ufloat(paramsPeriode1[2], errorsPeriode1[2])
-#
-# print('--------------------------------------------------------------')
-# print('Hyperbel b Parameter')
-# print('a und c 1: ', aPeriode1, cPeriode1)
-# print("b Parameter1: ", bPeriode1)
-#
-# # fit for second period
-# paramsPeriode2, covPeriode2 = curve_fit(hyperbel, amplitude[1:], periode2[1:])
-# errorsPeriode2 = np.sqrt(np.diag(covPeriode2))
-# aPeriode2 = ufloat(paramsPeriode2[0], errorsPeriode2[0])
-# bPeriode2 = ufloat(paramsPeriode2[1], errorsPeriode2[1])
-# cPeriode2 = ufloat(paramsPeriode2[2], errorsPeriode2[2])
-#
-# print('a und c 2: ', aPeriode2, cPeriode2)
-# print('b Parameter2: ', bPeriode2)
-# print("Verhältnis 1/2: ", bPeriode1/bPeriode2)
-# print("Verhältnis 2/1: ", bPeriode2/bPeriode1)
-# print('')
-#
-# # plot this nice plots
-# x = np.linspace(1, 10.5, 10000)
-# plt.plot(amplitude, periode1, 'b.', markersize=10, fillstyle='none', label="Periode 1")
-# plt.plot(amplitude[1:], periode2[1:], 'r.', markersize=10, fillstyle='none', label="Periode 2")
-# plt.plot(x, hyperbel(x, *paramsPeriode1), 'b--',label="Fit Periode 1")
-# plt.plot(x, hyperbel(x, *paramsPeriode2), 'r-',label="Fit Periode 2")
-# plt.xlabel('RF-Amplitude / V')
-# plt.ylabel(r'Periodendauer/ ms')
-# plt.tight_layout()
-# plt.legend(loc='best')
-# plt.savefig('Perioden.pdf')
-# plt.clf()
-#
+amplitude, periode1, periode2 = np.genfromtxt('daten_perioden.txt', unpack=True)
+
+# scale to ms
+periode1 = periode1*10**(-3)
+periode2 = periode2*10**(-3)
+
+# fit for first period
+paramsPeriode1, covPeriode1 = curve_fit(hyperbel, amplitude[1:], periode1[1:])
+errorsPeriode1 = np.sqrt(np.diag(covPeriode1))
+aPeriode1 = ufloat(paramsPeriode1[0], errorsPeriode1[0])
+bPeriode1 = ufloat(paramsPeriode1[1], errorsPeriode1[1])
+cPeriode1 = ufloat(paramsPeriode1[2], errorsPeriode1[2])
+
+print('--------------------------------------------------------------')
+print('Hyperbel b Parameter')
+print('a und c 1: ', aPeriode1, cPeriode1)
+print("b Parameter1: ", bPeriode1)
+
+# fit for second period
+paramsPeriode2, covPeriode2 = curve_fit(hyperbel, amplitude[1:], periode2[1:])
+errorsPeriode2 = np.sqrt(np.diag(covPeriode2))
+aPeriode2 = ufloat(paramsPeriode2[0], errorsPeriode2[0])
+bPeriode2 = ufloat(paramsPeriode2[1], errorsPeriode2[1])
+cPeriode2 = ufloat(paramsPeriode2[2], errorsPeriode2[2])
+
+print('a und c 2: ', aPeriode2, cPeriode2)
+print('b Parameter2: ', bPeriode2)
+print("Verhältnis 1/2: ", bPeriode1/bPeriode2)
+print("Verhältnis 2/1: ", bPeriode2/bPeriode1)
+print('')
+
+# plot this nice plots
+x = np.linspace(0, 11, 10000)
+plt.plot(amplitude, periode1, 'C3x', markersize=10, fillstyle='none', label="Periode 2")
+plt.plot(amplitude[1:], periode2[1:], 'C2x', markersize=10, fillstyle='none', label="Periode 1")
+plt.plot(x, hyperbel(x, *paramsPeriode1), 'C3-',label="Regression Periode 2")
+plt.plot(x, hyperbel(x, *paramsPeriode2), 'C2-',label="Regression Periode 1")
+plt.xlabel('RF-Amplitude / V')
+plt.ylabel(r'Periodendauer/ ms')
+plt.tight_layout()
+plt.legend(loc='best')
+plt.savefig('Perioden.pdf')
+plt.clf()
 
 
-# # assessment quadratic zeeman
+# assessment quadratic zeeman
 # U1 = g1*bohr*np.max(B1)+g1**2*bohr**2*np.max(B1)**2*(1-2*2)/(4.53e-24)
 # U2 = g2*bohr*np.max(B2)+g2**2*bohr**2*np.max(B2)**2*(1-2*3)/(2.01e-24)
 #
