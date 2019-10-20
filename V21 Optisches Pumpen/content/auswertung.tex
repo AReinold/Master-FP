@@ -27,7 +27,7 @@ Für die beiden Resonanzstellen ergeben sich die folgenden Regressionsparameter:
   a_1 = a_2 &= \SI{8,9 \pm 1,6 e-10}{\frac{MHz}{T}} \\
   b_1 = b_2 &= \SI{-1,6 \pm 0,9 e-4}{T}\\
 \end{align*}
-Die Messwerte für $f_\text{RF}=\SI{1}{MHz}$ erforderten eine so große horitontale B-Feldkomponente, dass dieser Wert für den Graph und die anschließende Ausgleichsrechnung außer Acht gelassen wird. Aufgrund der nicht vorhandenen charakteristischen Abweichungen der beiden Resonanzen in den Regressionswerten und die Dominanz des Horizontalfeldes, lässt sich keine Zuordnung der beiden Isotope treffen.
+Die Messwerte für $f_\text{RF}=\SI{1}{MHz}$ erforderten eine so große horizontale B-Feldkomponente, dass dieser Wert für den Graph und die anschließende Ausgleichsrechnung außer Acht gelassen wird. Aufgrund der nicht vorhandenen charakteristischen Abweichungen der beiden Resonanzen in den Regressionswerten und die Dominanz des Horizontalfeldes, lässt sich keine Zuordnung der beiden Isotope treffen.
 \begin{table}[h]
   \centering
   \caption{Resonanzpositionen abhängig von der RF-Frequenz.}
@@ -64,7 +64,7 @@ nach den Landé-Faktoren $g_F$ umgestellt. Mit dem Planckschen Wirkungsquantum $
   \Rightarrow g_{F_1}&= 0,081 \pm 0,015\\
   \Rightarrow g_{F_2}&= 0,080 \pm 0,014.
 \end{align*}
-Für die Berechnung des Kernspins wird als erstes der Faktor $g_J$ aus \eqref{eq:gj} bestimmt. Mit \eqref{eq:gf} lässt sich dann der Kernspin $I$ bestimmen. Mit $J,S=0,5,L=0$ \cite{anleitung} und dem Zusammenhang $\vec{F}=\vec{J}+\vec{I}$ ergibt sich sodann:
+Für die Berechnung des Kernspins wird als erstes der Faktor $g_J$ aus \eqref{eq:gj} bestimmt. Mit \eqref{eq:gf} lässt sich dann der Kernspin $I$ bestimmen. Mit $J,S=\frac{1}{2}, L=0$ \cite{anleitung} und dem Zusammenhang $\vec{F}=\vec{J}+\vec{I}$ ergibt sich sodann:
 \begin{align*}
   I_1&= 11,9\pm2,0\\
   I_2&=12,0\pm2,2.
@@ -74,29 +74,29 @@ Im Vergleich zu den Literaturwerten \cite{rubidium}
   \ce{^{85}Rb}&:\; I=\frac{5}{2}\\
   \ce{^{87}Rb}&:\; I=\frac{3}{2}
 \end{align*}
-Eine Zuordnung der Messwerte zu den jeweiligen Isotopen ist aufgrund der unaussagekräftigen Abweichungen nicht möglich.
+ist eine Zuordnung der Messwerte zu den jeweiligen Isotopen ist aufgrund der unaussagekräftigen Abweichungen nicht möglich.
 \subsection{Berechnung des Isotopenverhältnisses}
-Um das Isotopenverhältnis zu bestimmen wird mir dem Cursor des Oszilloskops die Aplituden wie sie in Abbildung \ref{fig:typSignalbild} zu sehen sind, abgelesen.
+Um das Isotopenverhältnis zu bestimmen wird mir dem Cursor des Oszilloskops die Amplituden wie sie in Abbildung \ref{fig:typSignalbild} zu sehen sind, abgelesen.
 Es ergeben sich die Aplituden in Einheiten der Oszilloskop-Koordinatensystemstriche:
 \begin{align*}
 A_1&= 5,5\\
 A_2&= 11,5\\
-\Rightarrow =\frac{A_1}{A_2}&=\frac{11}{23}\approx 0,48.
+\Rightarrow \frac{A_1}{A_2}&=\frac{11}{23}\approx 0,48.
 \end{align*}
-Für das Isotopenverhältnis in der Natur gilt:
+Für das Isotopenverhältnis in der Natur gilt \cite{rubidium}:
 \begin{align*}
-\Rightarrow =\frac{A_1}{A_2}=\frac{28\%}{72\%}\approx 0,38.
+\Rightarrow \frac{A_1}{A_2}=\frac{28\%}{72\%}\approx 0,38.
 \end{align*}
 Das Verhältnis des Isotopengeschmischs im Aufbau ist also um $26,3\%$ größer als in der Natur vorliegend.
 \subsection{Quadratischer Zeemann-Effekt}
 Für eine Abschätzung des quadratischen Zeemann-Effekts wird mit dem Zusammenhang \eqref{eq:quadratisch} die Energiedifferenz der Niveaus berechnet.
-Mit den maximal gemessenen magnetischen Feldstärken für die erste Resonanzstelle von $B=\SI{1088,78}{µT}$ und $B=\SI{1096,37}{µT}$ für die zweite, ergibt sich mit $m_F=3$ für \ce{^{85}Rb} und $m_F=2$ für \ce{^{87}Rb} und der entsprechenden Hyperfeinstrukturaufspaltung aus Formel \eqref{eq:thermisch} ergeben sich:
+Mit den maximal gemessenen magnetischen Feldstärken für die erste Resonanzstelle von $B=\SI{1088,78}{µT}$ und $B=\SI{1096,37}{µT}$ für die zweite, ergibt sich mit $m_F=3$ für \ce{^{85}Rb} und $m_F=2$ für \ce{^{87}Rb} und der entsprechenden Hyperfeinstrukturaufspaltung aus Formel \eqref{eq:thermisch}:
 \begin{align*}
   W_1&= \SI{3,6 \pm 0,6 e-9}{eV}\\
   W_2&= \SI{3,6 \pm 1,6 e-9}{eV}.
 \end{align*}
 \subsection{Transiente Effekte}
-Die ansteigenden Kurven für beide Isotope sind in Abbildung \ref{fig:signal1} gezeigt. Die Periodendauern der Oszillationen sind in Abbildung \ref{fig:resonanz} grafisch dargestellt.
+Die ansteigenden Kurven für beide Isotope sind in Abbildung \ref{fig:signal1} gezeigt. Die Periodendauern der Oszillationen der Messwerte aus Tabelle \ref{tab:amplituden} sind in Abbildung \ref{fig:resonanz} graphisch dargestellt.
 Eine hyperbolische Ausgleichsrechnung der Form
 \begin{equation}
   y=a+\frac{b}{x-c}
@@ -119,7 +119,28 @@ Daraus errechnet sich das Verhältnis von
 \frac{b_2}{b_1}=\frac{\ce{^{85}Rb}}{\ce{^{87}Rb}}=1,04 \pm 0,20
 \end{equation*}
 zwischen den Landé-Faktoren.
-Dies entspricht einer Abweichung von $69,33\%$ von dem theoretischen Wert von 1,5\cite{anleitung}.
+Dies entspricht einer Abweichung von $69,33\%$ von dem theoretischen Wert von 1,5 \cite{anleitung}.
+
+\begin{table}[h]
+  \centering
+  \caption{Periodenlänge der Oszillationen der beiden Isotope in Abhängigkeit von der RF-Amplitude.}
+  \label{tab:amplituden}
+  \begin{tabular}{S[table-format=1.1] S S}
+    {RF-Amplitude / V} & {Periodenlänge Resonanz 1 / µs} & {Periodenlänge Resonanz 1 / µs}\\
+    \midrule
+    1 &  4240 &   1507\\
+    2 &  1787 &   1040\\
+    3 &  1272 &   850\\
+    4 &  970 &  647\\
+    5 &  784 &  520\\
+    6 & 649 &  434\\
+    7 & 566 &  378\\
+    8 & 493 &  325\\
+    9 & 440 &  292\\
+    10 & 403 &  269\\
+  \end{tabular}
+\end{table}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{Berechnung/perioden.pdf}
