@@ -27,7 +27,6 @@ bohr = constants.value('Bohr magneton')
 # load data
 RFfrequenz, Sweep1, Horizontal1, Sweep2, Horizontal2 = np.genfromtxt('resonanz.txt', unpack=True)
 
-
 RFfrequenz = RFfrequenz*10**(3)
 # scale in ampere
 I1_Sweep = Sweep1*0.1
@@ -37,14 +36,17 @@ I1_Horizontal = Horizontal1*0.3
 I2_Horizontal = Horizontal2*0.3
 
 # Constants
-N_Sweep = 11
-R_Sweep = 16.39*10**(-2)
+N_Horizontal = 11
+R_Horizontal = 16.39*10**(-2)
 
-N_Horizontal = 154
-R_Horizontal = 15.79*10**(-2)
+N_Sweep = 154
+R_Sweep = 15.79*10**(-2)
 
-N_Vertical = 20
-R_Vertical = 11.735*10**(-2)
+N_Vertikal = 20
+R_Vertikal = 11.735*10**(-2)
+
+I_Vertikal=2.29*0.1
+B_Vertikal = Bfeld(I_Vertikal, N_Vertikal, R_Vertikal)
 
 # calculate magnetic field
 B1_Sweep = Bfeld(I1_Sweep, N_Sweep, R_Sweep)
@@ -85,13 +87,13 @@ print('Horizontalkomponente 1: ', bB1)
 print('Horizontalkomponente 2: ', bB2)
 print('')
 
-x = np.linspace(0, 0.9*10**6, 100000)
+x = np.linspace(0, 1*10**6, 100000)
 plt.plot(RFfrequenz, B1, 'C2x', markersize=10, fillstyle='none', label="Erstes Isotop")
 plt.plot(x, linear(x, *paramsB1), 'C2-', label="Regression 1")
 plt.plot(RFfrequenz, B2, 'C3x', markersize=10, fillstyle='none', label="Zweites Isotop")
 plt.plot(x, linear(x, *paramsB2), 'C3--', label="Regression 2")
 plt.xticks([0, 200000, 400000, 600000, 800000], ['0', '0.2', '0.4', '0.6', '0.8'])
-plt.yticks([-0.0002, 0.0000, 0.0002, 0.0004, 0.0006], ['-200', '0', '200', '400', '600'])
+plt.yticks([0.0000,0.000050 ,0.0001,0.00015, 0.00020, 0.00025], ['0','50' ,'100','150','200','250'])
 plt.xlabel(r'RF-Frequenz / MHz')
 plt.ylabel(r'Horizontalkomponente von B / $\mu$T')
 plt.tight_layout()
@@ -143,6 +145,7 @@ print('b Parameter2: ', bPeriode2)
 print("Verhältnis 1/2: ", bPeriode1/bPeriode2)
 print("Verhältnis 2/1: ", bPeriode2/bPeriode1)
 print('')
+print(B_Vertikal)
 
 # plot this nice plots
 x = np.linspace(0, 11, 10000)
@@ -158,16 +161,16 @@ plt.savefig('Perioden.pdf')
 plt.clf()
 
 
-# assessment quadratic zeeman
-# U1 = g1*bohr*np.max(B1)+g1**2*bohr**2*np.max(B1)**2*(1-2*2)/(4.53e-24)
-# U2 = g2*bohr*np.max(B2)+g2**2*bohr**2*np.max(B2)**2*(1-2*3)/(2.01e-24)
-#
-# print('------------------------------------------------------------')
-# print('Quadratische Zeeman-Aufspaltung')
-# print('Maximales BFeld1: ', np.round(np.max(B1)*10**6, 2))
-# print('Maximales BFeld2: ', np.round(np.max(B2)*10**6, 2))
-# print('Quadratische Zeeman-Aufspaltung 1 in eV: ', U1/constants.e)
-# print('Quadratische Zeeman-Aufspaltung 2 in eV: ', U2/constants.e)
+#assessment quadratic zeeman
+U1 = g1*bohr*np.max(B1)+g1**2*bohr**2*np.max(B1)**2*(1-2*2)/(4.53e-24)
+U2 = g2*bohr*np.max(B2)+g2**2*bohr**2*np.max(B2)**2*(1-2*3)/(2.01e-24)
+
+print('------------------------------------------------------------')
+print('Quadratische Zeeman-Aufspaltung')
+print('Maximales BFeld1: ', np.round(np.max(B1)*10**6, 2))
+print('Maximales BFeld2: ', np.round(np.max(B2)*10**6, 2))
+print('Quadratische Zeeman-Aufspaltung 1 in eV: ', U1/constants.e)
+print('Quadratische Zeeman-Aufspaltung 2 in eV: ', U2/constants.e)
 
 # Exponential fit
 #exp1 = pd.DataFrame()

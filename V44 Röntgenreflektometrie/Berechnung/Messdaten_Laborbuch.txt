@@ -1,0 +1,14 @@
+Maximale Intensität:
+I_max=1117270
+
+Halbwertsbreite aus Detektorscan-Datei auslesen..
+
+Rocking Scan:
+I_max=757034,1
+X_links=-0,5572
+X_rechts=0,5862
+Breite Dreieck insgesamt: 1,1434
+
+Maße Silizium-Polysterol-Ding:
+
+2cm x 2cm
