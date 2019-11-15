@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+import numpy as np
+plt.rcParams['text.usetex'] = True
+plt.rcParams['text.latex.unicode'] = True
+plt.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+
+
+#Reflekscan:
+winkel1, counts1 = np.genfromtxt('C:/Users/Pauli/Desktop/g-Variation/Standard.txt', unpack = True)
+#Diffscan
+#winkel2, counts2 = np.genfromtxt('C:/Users/Pauli/Desktop/g-Variation/Standard2.txt', unpack = True)
