@@ -1,17 +1,18 @@
 \section{Auswertung}
-Zur Bestimmung der Parameter der Probe ist es zunächst notwendig den Geometriefaktor $G$:
+Zur Bestimmung der Parameter der Probe ist es zunächst notwendig den Geometriefaktor $G$
 \begin{equation}
   G =
      \begin{cases}
-       \frac{D}{\sin\left(\upalpha_i\right)}{d_0} &\quad\upalpha_i<\upalpha_g\\
-       1 &\quad\upalpha_i\geq\upalpha_g
+       \frac{D}{\sin\left(\upalpha_i\right)}{d_0} &\quad\upalpha_i<\upalpha_G\\
+       1 &\quad\upalpha_i\geq\upalpha_G
      \end{cases}
 \end{equation}
-zu berechnen. Hierbei ist $\upalpha_i$ der Einfallswinkel der Strahlung auf die Probe und $\upalpha_g$ der Geometriewinkel
+zu berechnen. Hierbei ist $\upalpha_i$ der Einfallswinkel der Strahlung auf die Probe und $\upalpha_G$ der Geometriewinkel
 \begin{equation}
-\upalpha_g=\arcsin\Bigl(\frac{d_0}{D}\Bigr).
+\upalpha_G=\arcsin\Bigl(\frac{d_0}{D}\Bigr).
 \end{equation}
-$D=2\,\si{\cm}$ ist der Probendurchmesser und $d_0=0{,}2\,\si{\mm}$ die Höhe des Strahls. Der Geometriewinkel wird während des Justierens bestimmt und ist in diesem Fall $\upalpha_g=0.5717°$.
+$D=2\,\si{\cm}$ ist der Probendurchmesser und $d_0=0{,}2\,\si{\mm}$ die Höhe des Strahls.\\
+ Der Geometriewinkel wird während des Justierens bestimmt und ist in diesem Fall $\upalpha_G=0.5717°$.
 Durch Teilen der Messwerte durch den Geometriefaktor wird berücksichtigt, dass erst ab ausreichend großen Winkeln der gesamte Strahl die Probe trifft. Messwerte für sehr flache Winkel werden ausgelassen, da hierbei die Strahlung noch direkt in den Detektor treffen kann.\\
 Zur Aufbereitung der Daten werden außerdem die Messdaten der Diffusionsmessung von denen der direkten Reflektionsmessung abgezogen. Zum Darstellen der aufgenommenen Messwerte werden die aufgenommenen Daten gegen den Wellenvektorübertrag $q_z=\frac{4\pii}{\lambda}\sin(\upalpha_i)$ aufgetragen. Hierbei ist $\lambda$ die Strahlungswellenlänge von $1{,}54\cdot10^{-10}\,\si{\m}$. Die Ergebnisse sind in Abb.\ref{Plot1} zu sehen.
 \begin{figure}[H]
