@@ -1,0 +1,12 @@
+1:
+R1=100k Ohm
+R2=10k Ohm
+2:
+R1=100k Ohm
+R2=1k Ohm
+3:
+R1=10k Ohm
+R2=0.5k Ohm
+4:
+R1=10k Ohm
+R2=33k Ohm
