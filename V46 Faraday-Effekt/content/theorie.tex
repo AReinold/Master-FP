@@ -26,15 +26,16 @@ In einem doppeltbrechenden Kristall ist es nun so, dass die Phasengeschwindigkei
 \end{equation}
 lässt sich mit
 \begin{equation}
-  \psi:=\frac{1}{2}\left(k_\text{R})+k_\text{L})
+  \psi\coloneqq\frac{1}{2}\left(k_\text{R})+k_\text{L}\right)
 \end{equation}
 und
 \begin{equation}
-\Theta:=\frac{1}{2}\left(k_\text{R})-k_\text{L})
+\Theta:=\frac{1}{2}\left(k_\text{R})-k_\text{L}\right)
+\label{eq:theta}
 \end{equation}
 zeigen, dass sie sich nach einer Länge L durch
 \begin{equation}
-E(L)=E_0 \exp{\text{i}\psi}\left(\cos(\Theta)\vec{x_0}+\sin(\Theta)\vec{y_0})\,,
+E(L)=E_0\exp{\text{i}\psi}\left(\cos(\Theta)\vec{x_0}+\sin(\Theta)\vec{y_0}\right)\,,
 \end{equation}
 beschreiben lässt.\\
 Die Ursache des doppeltbrechenden Verhaltens einiger Kristalle liegt in induzierten Dipolen im Kristall, welche durch das Feld der Strahlung erzeugt werden. Diese Verursachen eine makroskopische Polarisierung $\vec{P}$ des Kristalls
@@ -42,3 +43,59 @@ Die Ursache des doppeltbrechenden Verhaltens einiger Kristalle liegt in induzier
 \vec{P}=\epsilon_0\chi\vec{E}\,,
 \end{equation}
 wobei $\epsilon_0$ die Influenzkonstante und $\chi$ die dieelektrische Suszeptibilität ist.
+Für anisotrope Kristalle ist $\chi$ ein Tensor der Form
+\begin{equation}
+  \chi=
+  \left[ {\begin{array}{ccc}
+   \chi_\text{xx} & \chi_\text{xy} & \chi_\text{xz}\\
+   \chi_\text{yx} & \chi_\text{yy} & \chi_\text{yz}\\
+   \chi_\text{zx} & \chi_\text{zy} &\chi_\text{zz}
+  \end{array} } \right]\,.
+\end{equation}
+Während bei $\chi$ sich in vielen Fällen diagonalisieren lässt, treten für doppeltbrechende Materialien nicht-diagonale Elemente auf, welche komplex konjugiert zueinander sind.
+\begin{equation}
+  \chi=
+  \left[ {\begin{array}{ccc}
+   \chi_\text{xx} & \text{i}\chi_\text{xy} & 0\\
+   \text{i}\chi_\text{yx} & \chi_\text{yy} & 0\\
+   0 & 0 &\chi_\text{zz}
+  \end{array} } \right]\,.
+\end{equation}
+Durch lösen der Wellengleichung für eine ebene Welle in $\vec{z}$-Richtung lässt sich zeigen, dass die Wellenzahl für doppeltbrechende Medien nur die Werte
+\begin{equation}
+k_{\pm}=\frac{\omega}{\text{c}}\sqrt{(1+\chi_\text{xx})\pm \chi_{\text{xy}}}
+\end{equation}
+annehmen kann, wobei $\omega$ die Kreisfrequenz ist. Daraus folgt, dass zwei Phasengeschwindigkeiten möglich sind: Eine für rechtszirkularpolarisiertes und eine für linkszirkularpolarisiertes Licht
+\begin{equation}
+  \centering
+v_{{\text{Ph}_\text{R}}}=\frac{\text{c}}{\sqrt{1+\chi_\text{xx}+\chi_\text{xy}}} \quad \text{und}\quad v_{{\text{Ph}_\text{L}}}=\frac{\text{c}}{\sqrt{1+\chi_\text{xx}-\chi_\text{xy}}} \,.
+\end{equation}
+Nach (\ref{eq:theta}) ist es dann möglich den Drehwinkel mit
+\begin{equation}
+  \theta \approx \frac{\text{L}\omega}{2\text{c}n}\chi_\text{xy}
+\end{equation}
+zu bestimmen, wobei $n$ der Brechungsindex ist.
+\subsection{Der Faraday-Effekt}
+Der Faraday-Effekt beschreibt das Erzeugen von Doppelbrechung in einem an sich optisch inaktiven Medium durch das Anlegen eines äußeren Magnetfelds. Das Magnetfeld beeinflusst die Kristallelektrone, sodass die Bewegungsgleichung durch
+\begin{equation}
+  m\frac{\text{d}^2\,\vec{r}}{\text{d}\,t^2}+K\vec{r}=-\text{e}_0\left(\vec{E}(r)+\frac{\text{d}\,\vec{r}}{\text{d}\,t}\times\vec{B}\right)
+\end{equation}
+gegeben ist. Hierbei ist $\vec{r}$ die Auslenkung eines Elektrons aus dem Gleichgewicht, $K$ eine Bindungskonstante zur Umgebung, $m$ die Masse, e$_0$ die Ladung und $\vec{E}$ die Feldstärke.
+Unter der Annahme, dass für die Feldstärke gilt $E~\exp{-\text{i}\omega t}$ und mit der Polarisation $\vec{P}=-N\text{e}_0\vec{r}$, wobei $N$ die Zahl der Elektronen pro Volumeneinheit ist, wird aus der Bewegungsgleichung
+\begin{equation}
+-m\omega^2\vec{P}+K\vec{P}=\text{e}_0^2N\vec{E}+i\text{e}_0\omega\vec{P}\times\vec{B}\,.
+\end{equation}
+Bei Betrachtung eines in z-Richtung liegenden Magnetfelds stellt sich heraus, dass der Suszeptibilitätstensor nicht-diagonale Elemente enthält die komplex konjugiert zueinander sind.
+Es lässt sich zeigen, dass der Drehwinkel der auftretenden Doppelbrechung durch
+\begin{equation}
+\theta=\frac{\text{e}_0^3\omega^2NBL}{2\epsilon_0cm^2\left(\left(-\omega^2+K/m\right)^2-\left(\frac{\text{e}_0}{m}B\omega\right)^2\right)n}
+\end{equation}
+beschrieben wird. Der Faktor $\sqrt{K/m}$ lässt sich als Resonanzfrequenz $\omega_0$ definieren und $\frac{B\text{e}_0}{m}$ als Zyklotron-Frequenz $\omega_c$. Für ein System bei welchem die Messfrequenz viel kleiner als $\omega_0$ ist und $\omega_0>\omega_c$ ist gilt:
+\begin{equation}
+\theta(\lambda)=\frac{2\pi^2\text{e}_0^3c}{\epsilon_0}\frac{1}{m^2}\frac{1}{\lambda^2\omega_0^4}\frac{NBL}{n}
+\label{eq:theta2}
+\end{equation}
+Ersetzt man die Elektronenmasse $m$ durch die effektive Masse $m^*$ so lassen die Kristallelektronen sich wie freie Teilchen behandeln und (\ref{eq:theta2}) vereinfacht sich zu
+\begin{equation}
+\theta_\text{frei}=\frac{\text{e}_0^3}{8\pi^2\epsilon_0c^3}\frac{1}{{m^*}^2}\lambda^2\frac{NBL}{n}
+\end{equation}
