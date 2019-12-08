@@ -1,10 +1,36 @@
 \section{Auswertung}
-
-
+\subsection{Bestimmung der maximalen Kraftflussdichte des verwendeten Aufbaus mit Magnetfeld}
+Im Folgenden werden die Daten ausgewertete, die aufgenommen wurden, um für eine weitere Analyse das maximale Magnetfeld innerhab des Aufbaus zu bestimmt. Wie bereits in Kapitel \ref{durchfuehrung} beschrieben, ist eine Messreihe mit einer Hall-Sonde durchgeführt worden; die erhaltenen Messwerte sind in Tabelle \ref{tab:messwerte_hall} zu sehen.
+Graphisch aufgetragen sind ebendiese in Abbildung \ref{hall}. Zur Bestimmung des Maximums ist eine Ausgleichsrechnung der Form
+\begin{equation}
+B(z)=az^4+bz^3+cz^2+dz+e
+\label{eq:regression}
+\end{equation}
+für die Messwerte $B(z)>100$ durchgeführt worden.
+Als Regressionsparameter ergeben sich
+\begin{align*}
+  a&=-\SI{0,0076 \pm 0,0007}{mTmm^{-4}}\\
+  b&=\SI{0,39 \pm 0,06}{mTmm^{-3}}\\
+  c&=-\SI{7,6 \pm 0,7}{mTmm^{-2}}\\
+  d&=\SI{6,6 \pm 6,0}{mTmm^{-1}}\\
+  e&=-\SI{215 \pm 2}{mT}.
+\end{align*}
+Über die Ableitung der Regressionsfunktion \eqref{eq:regression}
+\begin{equation}
+\frac{\text{d}}{\text{dz}}B(z)=4a^3+3b^2+2c+d \stackrel{!}{=} 0
+\end{equation}
+und dem Umstellen nach $z$ folgt ein Maximalwert von
+\begin{equation}
+ z_\text{max}=\SI{128,24}{mm}.
+\end{equation}
+Hierüber folgt durch Einsetzen in Formel \eqref{eq:regression}
+\begin{equation}
+B_\text{max}=\SI{414,5}{mT}.
+\end{equation}
 \begin{table}[h]
   \footnotesize
   \centering
-  \caption{Mit einer Hallsonde gemessene Magnetfeldstärke im Bereich des Luftsspalt zur Bestimmung des Maximalwerts.}
+  \caption{Mit einer Hall-Sonde gemessene Magnetfeldstärke im Bereich des Luftspalts zur Bestimmung des Maximalwerts.}
   \label{tab:messwerte_hall}
   \begin{tabular}{S[table-format=1.1] S S}
     {$z$ / mm} & {$B$ / mT}\\
@@ -60,11 +86,62 @@
     160 & 0 \\
   \end{tabular}
 \end{table}
+\clearpage
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/hall.pdf}
+  \caption{Die magnetische Kraftflussdichte $B$ aufgetragen gegen die Längenkoordinate $z$ innerhalb der Magnetspulen. Zur Bestimmung des Maximalwertes von $B$ ist eine Ausgleichsrechnung der Form $B(z)=az^4+bz^3+cz^2+dz+e$ eingezeichnet.}
+  \label{hall}
+\end{figure}
 
+\subsection{Bestimmung der effektiven Masse}
+Für die Faraday-Rotation wird Licht im Wellenlängenbereich von $\SI{1,06}{µm}$ und $\SI{2,65}{µm}$ verwendet.
+Die durch Filtern erzeugten neun Wellenlängen sind in den Tabellen \ref{tab:probe1}, \ref{tab:probe2} und \ref{tab:probe3} zu sehen.
+Es folgt die Auswertung der drei Proben mit den Parametern
+\begin{align*}
+d_\text{hochrein}&=\SI{5,11}{mm}\\
+d_{N=1,2\cdot10^{18}}&=\SI{1,36}{mm}\\
+d_{N=2,58\cdot10^{18}}&=\SI{1,296}{mm}.
+\end{align*}
+Hierbei ist die erste benannte Probe $d_\text{hochrein}$ die hochreine und die beiden letzten die dotierten $\ce{GaAs}$-Proben mit der Dotierkonzentration $N$.\\
+Es werden die Differenzen der beiden abgelesenen Winkel zu
+\begin{equation}
+  \theta=\theta_1-\theta_2
+\end{equation}
+bestimmt. Diese Winkelgrößen und die daraus abgeleitete Größe $\theta/d$ sind in den Tabellen \ref{tab:probe1}, \ref{tab:probe2} und \ref{tab:probe3} eingetragen.
+In der Abbildung \ref{GaAs1} wird $\theta/d$ gegen $\lambda^2$ aufgetragen.\\
+Darüber hinaus wird die Differenz der normierten Rotationswinkel $\theta/d$ der beiden dotierten $\ce{GaAs}$-Proben mit den Daten der hochreinen Probe in Abbildung \ref{GaAs2} gebildet und dargestellt.
+Für das Ermitteln der effektiven Massen werden zwei lineare Ausgleichsrechnungen der Form
+\begin{equation}
+  f(\lambda^2)=\theta/d(\lambda^2)=a\lambda^2+b
+\end{equation}
+erstellt, aus denen sich die folgenden Parameter ergeben:
+\begin{align*}
+&\text{hochreine Probe - n-dotiert}\; N=\SI{1.2e18}{\centi\meter^{-3}}:\\
+&a_1=-\SI{16,0 \pm 12,9}{\meter^{-3}}\\
+&b_1=\SI{90,99 \pm 56,33}{\meter^{-1}}\\
+&\text{hochreine Probe - n-dotiert}\; N=\SI{2.8e18}{\centi\meter^{-3}}:\\
+&a_2=\SI{4,1\pm29,7}{\meter^{-3}}\\
+&b_2=\SI{121,5\pm129,9}{\meter^{-1}}
+\end{align*}
 
+Für das Bestimmen der effektiven Massen wird Gleichung \ref{eq:theta2} nach der gesuchten Größe umgestellt, sodass sich
+\begin{equation}
+m^{*} = \sqrt{\frac{e_0^3}{8\pii^2 \varepsilon_0 c^3} \frac{N B_\text{max}}{n} \frac{1}{a}}
+\end{equation}
+als Zusammenhang ergibt. Werden nun die Regressionsparameter $a_1$ und $a_2$ aus dem vorherigen Schritt benutzt, so ergeben sich
+\begin{align*}
+  m_1^{*} &= -\\
+  \shortintertext{für die $\ce{GaAs}$-Probe mit $N=\SI{1.2e18}{\centi\meter^{-3}}$ und}
+  m_2^{*} &= (\num{1 \pm 5e2})m_\text{e}
+\end{align*}
+für die $\ce{GaAs}$-Probe mit $N=\SI{2.8e18}{\centi\meter^{-3}}$, in Einheiten der Ruhemasse $m_\text{e}$ der Elektronen.
+Aufgrund der negativen Steigung bei der ersten Probe, lässt sich keine effektive Masse bestimmen.
+Der benötigte Brechungsindex für Galliumarsenid von $n=3,3543$ ist der Literatur entnommen worden \cite{Brechungsindex}.
+Es liegt eine Abweichung zu dem bestimmten Theoriewert der effektiven Masse $m^{*}=0,067m_\text{e}$ \cite{effmasse} von $\SI{149253}{\%}$ vor.
 \begin{table}[h]
   \centering
-  \caption{.}
+  \caption{Messwerte und die daraus abgeleiteten Größen $\Theta$ und $\Theta/d$ der Messung zur n-dotierten $\ce{GaAs}$-Probe mit $N=\SI{1.2e18}{\centi\meter^{-3}}$.}
   \label{tab:probe1}
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
@@ -83,7 +160,7 @@
 
 \begin{table}[h]
   \centering
-  \caption{.}
+  \caption{Messwerte und die daraus abgeleiteten Größen $\Theta$ und $\Theta/d$ der Messung zur n-dotierten $\ce{GaAs}$-Probe mit $N=\SI{2,8e18}{\centi\meter^{-3}}$.}
   \label{tab:probe2}
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
@@ -102,7 +179,7 @@
 
 \begin{table}[h]
   \centering
-  \caption{.}
+  \caption{Messwerte und die daraus abgeleiteten Größen $\Theta$ und $\Theta/d$ der Messung zur hochreinen Probe.}
   \label{tab:probe3}
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
@@ -118,3 +195,18 @@
     2,65 & 203,65 &  156,15 & 0.8290 & 162,23\\
   \end{tabular}
 \end{table}
+\clearpage
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/GaAs.pdf}
+  \caption{Die normierte Faraday-Rotation $\theta/d$ aufgetragen gegen das Quadrat der Wellenlänge $\lambda$ für die n-dotierten und die hochreine $\ce{GaAs}$-Probe.}
+  \label{GaAs1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/GaAs2.pdf}
+  \caption{Die Differenz der normierten Faraday-Rotationen der dotierten $\ce{GaAs}$-Proben mit denen der hochreinen $\ce{GaAs}$-Probe aufgetragen gegen $\lambda^2$.}
+  \label{GaAs2}
+\end{figure}
+\clearpage

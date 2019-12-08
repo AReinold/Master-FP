@@ -6,6 +6,7 @@ from uncertainties.umath import sqrt
 from uncertainties import ufloat
 import math
 l, w1, w2, w3 = np.genfromtxt('winkel.txt', unpack=True)
+l=l**2
 #def f(x, m,b):
 #    return m*1/x+b
 #params, cov = curve_fit(f, t, a)
