@@ -1,6 +1,7 @@
 \section{Auswertung}
 \subsection{Untersuchung des Linearverstärkers}
-Die Untersuchung der verschiedenen Linearverstärker beginnt mit der Bestimmung der Grenzfrequenz $v'_g$. Hierzu wird die Ausgangsspannung gegen die Frequenz aufgetragen und danach die Anhängigkeit der Verstärkung von der Frequenz untersucht. Die Grenzfrequenz ist dann diejenige, bei welcher die Verstärkung $V'$ auf $\frac{V'}{\sqrt{2}}$ abgefallen ist. Der Ausgangsspannungsverlauf des ersten Verstärkers mit $R_1=100\si{\kilo\ohm}$ und $R_2=10\si{\kilo\ohm}$ ist in Abb.\ref{plot1} dargestellt.
+Die Untersuchung der verschiedenen Linearverstärker beginnt mit der Bestimmung der Grenzfrequenz $v'_g$. Hierzu wird die Ausgangsspannung gegen die Frequenz aufgetragen und danach die Anhängigkeit der Verstärkung von der Frequenz untersucht. Die Grenzfrequenz ist dann diejenige, bei welcher die Verstärkung $V'$ auf $\frac{V'}{\sqrt{2}}$ abgefallen ist.
+Die Widerstandswerte für die Linearverstärker sind in Tabelle \ref{Tab_2} zu finden. Der Ausgangsspannungsverlauf des ersten Verstärkers ist in Abb.\ref{plot1} dargestellt.
 \begin{figure}[h]
   \centering
   \includegraphics[width=1\textwidth]{bilder/Figure_1.png}
@@ -11,15 +12,16 @@ Hierbei wird neben dem Darstellen der Messwerte noch ein Fit der Form
 \begin{equation}
 f(x)=mx^b
 \end{equation}
-durchgeführt um die Steigung der Gerade im doppeltlogarithmischen Plot zu bestimmen. Die Ergebnisse der Fits für die unterschiedlichen Linearverstärker sind in Tabelle \ref{Tab_1} eingetragen. Die Widerstandswerte für die weiteren Linearverstärker sind in Tabelle \ref{Tab_2} zu finden.
+durchgeführt um die Steigung der Gerade im doppeltlogarithmischen Plot zu bestimmen. Die Ergebnisse der Fits für die unterschiedlichen Linearverstärker sind in Tabelle \ref{Tab_1} eingetragen.
 \begin{table}[]
 \centering
-\begin{tabular}{c|cc}
-&$R_1\,[\si{\kilo\ohm}]$&$R_2\,[\si{\kilo\ohm}]$\\
+\begin{tabular}{c|ccc}
+&$R_1\,[\si{\kilo\ohm}]$&$R_2\,[\si{\kilo\ohm}]$&Verstärkungsfaktor\\
 \hline
-Verstärker 2 & 100 & 1   \\
-Verstärker 3 & 10  & 0,5 \\
-Verstärker 4 & 10  & 33
+Verstärker 1 & 100 & 10  &$1/10$\\
+Verstärker 2 & 100 & 1   &$1/100$\\
+Verstärker 3 & 10  & 0,5 &$1/20$\\
+Verstärker 4 & 10  & 33  &$3{,}3$
 \end{tabular}
 \label{Tab_2}
 \end{table}

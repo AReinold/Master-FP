@@ -19,7 +19,7 @@ plt.yscale('log')
 plt.xscale('log')
 f_log=np.log(f)
 U_log=np.log(U)
-plt.plot(f[0:12],U[0:12],'r.',label='Messwerte')
+plt.plot(f[0:12],1/U[0:12],'r.',label='Messwerte')
 def fx(x,m,b):
     return m*x**b
 ParamsI, CovarianceI = curve_fit(fx, f[6:12], U[6:12])
