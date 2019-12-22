@@ -6,7 +6,7 @@ Graphisch aufgetragen sind ebendiese in Abbildung \ref{hall}. Zur Bestimmung des
 B(z)=az^4+bz^3+cz^2+dz+e
 \label{eq:regression}
 \end{equation}
-für die Messwerte $B(z)>100$ durchgeführt worden.
+für die Messwerte $B(z)>100$ durchgeführt worden. Die Form dieser Funktion ist aufgrund der Symmetrie der Messwerte und der Ähnlichkeit zu quadratischen Funktionen gewählt worden. Diese Ausgleichsrechnung dient als Vergleich zu dem Wert für die maximale Magnetfeldstärke, der ebenso leicht per Augenmaß bestimmt werden kann.
 Als Regressionsparameter ergeben sich
 \begin{align*}
   a&=-\SI{0,0076 \pm 0,0007}{mTmm^{-4}}\\
@@ -106,39 +106,36 @@ d_{N=2,58\cdot10^{18}}&=\SI{1,296}{mm}.
 Hierbei ist die erste benannte Probe $d_\text{hochrein}$ die hochreine und die beiden letzten die dotierten $\ce{GaAs}$-Proben mit der Dotierkonzentration $N$.\\
 Es werden die Differenzen der beiden abgelesenen Winkel zu
 \begin{equation}
-  \theta=\theta_1-\theta_2
+  \theta=\frac{1}{2}(\theta_1-\theta_2)
 \end{equation}
 bestimmt. Diese Winkelgrößen und die daraus abgeleitete Größe $\theta/d$ sind in den Tabellen \ref{tab:probe1}, \ref{tab:probe2} und \ref{tab:probe3} eingetragen.
 In der Abbildung \ref{GaAs1} wird $\theta/d$ gegen $\lambda^2$ aufgetragen.\\
 Darüber hinaus wird die Differenz der normierten Rotationswinkel $\theta/d$ der beiden dotierten $\ce{GaAs}$-Proben mit den Daten der hochreinen Probe in Abbildung \ref{GaAs2} gebildet und dargestellt.
 Für das Ermitteln der effektiven Massen werden zwei lineare Ausgleichsrechnungen der Form
 \begin{equation}
-  f(\lambda^2)=\theta/d(\lambda^2)=a\lambda^2+b
+  f(\lambda^2)=\theta/d(\lambda^2)=a\lambda^2
 \end{equation}
 erstellt, aus denen sich die folgenden Parameter ergeben:
 \begin{align*}
 &\text{hochreine Probe - n-dotiert}\; N=\SI{1.2e18}{\centi\meter^{-3}}:\\
-&a_1=-\SI{16,0 \pm 12,9}{\meter^{-3}}\\
-&b_1=\SI{90,99 \pm 56,33}{\meter^{-1}}\\
+&a_1=\SI{10,49 \pm 4,17e12}{\frac{\mathrm{rad}}{\meter^{-3}}}\\
 &\text{hochreine Probe - n-dotiert}\; N=\SI{2.8e18}{\centi\meter^{-3}}:\\
-&a_2=\SI{4,1\pm29,7}{\meter^{-3}}\\
-&b_2=\SI{121,5\pm129,9}{\meter^{-1}}
+&a_2=\SI{17,33\pm6,43e12}{\frac{\mathrm{rad}}{\meter^{-3}}}\\
 \end{align*}
-
+Für diese Berechnung sind die negativen Differenzen der normierten Rotationswinkel außer Acht gelassen worden. Dies rührt aus physikalischen Überlegungen, da diese Werte nicht sinnvoll wären.
 Für das Bestimmen der effektiven Massen wird Gleichung \ref{eq:theta2} nach der gesuchten Größe umgestellt, sodass sich
 \begin{equation}
 m^{*} = \sqrt{\frac{e_0^3}{8\pii^2 \varepsilon_0 c^3} \frac{N B_\text{max}}{n} \frac{1}{a}}
 \end{equation}
 als Zusammenhang ergibt. Werden nun die Regressionsparameter $a_1$ und $a_2$ aus dem vorherigen Schritt benutzt, so ergeben sich
 \begin{align*}
-  m_1^{*} &= -\\
+  m_1^{*} &= \SI{0,061 \pm 0,012}{m_\text{e}}\\
   \shortintertext{für die $\ce{GaAs}$-Probe mit $N=\SI{1.2e18}{\centi\meter^{-3}}$ und}
-  m_2^{*} &= (\num{1 \pm 5e2})m_\text{e}
+  m_2^{*} &= \SI{0,072 \pm 0,013}{m_\text{e}}
 \end{align*}
 für die $\ce{GaAs}$-Probe mit $N=\SI{2.8e18}{\centi\meter^{-3}}$, in Einheiten der Ruhemasse $m_\text{e}$ der Elektronen.
-Aufgrund der negativen Steigung bei der ersten Probe, lässt sich keine effektive Masse bestimmen.
 Der benötigte Brechungsindex für Galliumarsenid von $n=3,3543$ ist der Literatur entnommen worden \cite{Brechungsindex}.
-Es liegt eine Abweichung zu dem bestimmten Theoriewert der effektiven Masse $m^{*}=0,067m_\text{e}$ \cite{effmasse} von $\SI{149253}{\%}$ vor.
+Es liegen Abweichungen zu dem bestimmten Theoriewert der effektiven Masse $m^{*}=0,067m_\text{e}$ \cite{effmasse} von jeweils $\SI{9,0}{\%}$ und $\SI{7,5}{\%}$ vor.
 \begin{table}[h]
   \centering
   \caption{Messwerte und die daraus abgeleiteten Größen $\theta$ und $\theta/d$ der Messung zur n-dotierten $\ce{GaAs}$-Probe mit $N=\SI{1.2e18}{\centi\meter^{-3}}$.}
@@ -146,15 +143,15 @@ Es liegt eine Abweichung zu dem bestimmten Theoriewert der effektiven Masse $m^{
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
     \midrule
-    1,06 &  168,05 &  158,00 & 0.1754 & 128,97\\
-    1,29 &  210,92 &  196,00 & 0.2604 & 191,47\\
-    1,45 &  205,92 &  200,75 & 0.0902 & 66,32\\
-    1,72 &  161,20 &  158,00 & 0.0558 & 41.03\\
-    1,96 &  165,20 &  146,50 & 0.3263 & 239,93\\
-    2,156 & 166,20 &  161,00 & 0.0907 & 66,69\\
-    2,34 & 200,40 &  187,00 & 0.2338 & 171,91\\
-    2,51 & 255,00 &  250,75 & 0.0741 & 54,49\\
-    2,65 & 299,00 &  294,00 & 0.0872 & 64,12\\
+    1,06 &  168,05 &  158,00 & 0.0877 & 64,49\\
+    1,29 &  210,92 &  196,00 & 0.1302 & 95,74\\
+    1,45 &  205,92 &  200,75 & 0.0451 & 33,16\\
+    1,72 &  161,20 &  158,00 & 0.0279 & 20,52\\
+    1,96 &  165,20 &  146,50 & 0.1632 & 119,97\\
+    2,156 & 166,20 &  161,00 & 0.0454 & 33,35\\
+    2,34 & 200,40 &  187,00 & 0.1169 & 85,96\\
+    2,51 & 255,00 &  250,75 & 0.0371 & 27,30\\
+    2,65 & 299,00 &  294,00 & 0.0436 & 32,06\\
   \end{tabular}
 \end{table}
 
@@ -165,15 +162,15 @@ Es liegt eine Abweichung zu dem bestimmten Theoriewert der effektiven Masse $m^{
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
     \midrule
-    1,06 &  279,48 &  275,58 & 0.0680 & 52,47\\
-    1,29 &  234,25 &  207,08 & 0.4742 & 348,68\\
-    1,45 &  256,50 &  245,15 & 0.1980 & 145,59\\
-    1,72 &  296,62 &  270,36 & 0.4583 & 336,99\\
-    1,96 &  280,33 &  269,33 & 0.1919 & 141,10\\
-    2,156 & 275,35 &  267,03 & 0.1452 & 106,76\\
-    2,34 & 307,82 &  290,43 & 0.3035 & 223,16\\
-    2,51 & 292,66 &  262,00 & 0.5351 & 393,46\\
-    2,65 & 295,05 &  282,05 & 0.2268 & 166,76\\
+    1,06 &  279,48 &  275,58 & 0.0340 & 26,24\\
+    1,29 &  234,25 &  207,08 & 0.2371 & 174,34\\
+    1,45 &  256,50 &  245,15 & 0.0990 & 72,80\\
+    1,72 &  296,62 &  270,36 & 0.2292 & 168,50\\
+    1,96 &  280,33 &  269,33 & 0.0960 & 70,55\\
+    2,156 & 275,35 &  267,03 & 0.0726 & 53,38\\
+    2,34 & 307,82 &  290,43 & 0.1518 & 111,58\\
+    2,51 & 292,66 &  262,00 & 0.2676 & 196,73\\
+    2,65 & 295,05 &  282,05 & 0.1134 & 83,38\\
   \end{tabular}
 \end{table}
 
@@ -184,28 +181,28 @@ Es liegt eine Abweichung zu dem bestimmten Theoriewert der effektiven Masse $m^{
   \begin{tabular}{S[table-format=1.1] S S S S}
     {$\lambda$ / µm} & {$\theta_1$ / °} & {$\theta_2$ / °} & {$\theta$ / rad} & {$\frac{\theta}{d}$ / rad $m^{-1}$}\\
     \midrule
-    1,06 &  243,00 &  226,78 & 0.2830 & 55,38\\
-    1,29 &  259,82 &  240,07 & 0.3447 & 67,46\\
-    1,45 &  241,25 &  221,62 & 0.3426 & 67,05\\
-    1,72 &  175,25 &  166,02 & 0.1610 & 31,51\\
-    1,96 &  262,12 &  181,33 & 1.4100 & 275,93\\
-    2,156 & 178,28 &  171,23 & 0.1230 & 24,07\\
-    2,34 & 184,42 &  178,50 & 0.1033 & 20,22\\
-    2,51 & 188,42 &  168,33 & 0.3506 & 68,61\\
-    2,65 & 203,65 &  156,15 & 0.8290 & 162,23\\
+    1,06 &  243,00 &  226,78 & 0.1415 & 27,69\\
+    1,29 &  259,82 &  240,07 & 0.1724 & 33,73\\
+    1,45 &  241,25 &  221,62 & 0.1713 & 33,53\\
+    1,72 &  175,25 &  166,02 & 0.0805 & 15,76\\
+    1,96 &  262,12 &  181,33 & 0.705 & 137,97\\
+    2,156 & 178,28 &  171,23 & 0.0615 & 12,04\\
+    2,34 & 184,42 &  178,50 & 0.0517 & 10,11\\
+    2,51 & 188,42 &  168,33 & 0.1753 & 34,31\\
+    2,65 & 203,65 &  156,15 & 0.4145 & 81,12\\
   \end{tabular}
 \end{table}
 \clearpage
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/GaAs.pdf}
+  \includegraphics[width=0.8\textwidth]{plots/winkel.pdf}
   \caption{Die normierte Faraday-Rotation $\theta/d$ aufgetragen gegen das Quadrat der Wellenlänge $\lambda$ für die n-dotierten und die hochreine $\ce{GaAs}$-Probe.}
   \label{GaAs1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/GaAs2.pdf}
+  \includegraphics[width=0.8\textwidth]{plots/linear.pdf}
   \caption{Die Differenz der normierten Faraday-Rotationen der dotierten $\ce{GaAs}$-Proben mit denen der hochreinen $\ce{GaAs}$-Probe aufgetragen gegen $\lambda^2$.}
   \label{GaAs2}
 \end{figure}
