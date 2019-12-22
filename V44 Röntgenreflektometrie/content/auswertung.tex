@@ -1,4 +1,25 @@
 \section{Auswertung}
+\subsection{Bestimmung der Strahlhöhe}
+Zur weiteren Auswertung der aufgenommenen Daten ist es zunächst notwendig die Strahlhöhe zu berechnen. Hierzu werden die Messwerte des Detektorscans mit einer Gaußfunktion der Form
+\begin{equation}
+  f(x)=a\cdot \exp\left(-\frac{(x-b)^2}{2c^2}\right)\,,
+\end{equation}
+gefittet und es wird die Halbwertsbreite bestimmt welche die Strahlhöhe gibt.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{Berechnung/fwhm.png}
+  \caption{Messwerte des Detektorscans mit Fit.}
+\end{figure}
+Als Fitparameter ergeben sich
+\begin{align}
+a&=(1{,}109\pm0{,}005)\cdot10^6\nonumber\\
+b&=-0{,}00026\pm0{,}00024\nonumber\\
+c&=0{,}0444\pm0{,}0003
+\end{align}
+Die Stralhöhe bestimmt sich zu
+\begin{equation}
+d_0\approx0{,}1\,\si{\mm}\nonumber
+\end{equation}
 Zur Bestimmung der Parameter der Probe ist es zunächst notwendig den Geometriefaktor $G$
 \begin{equation}
   G =
