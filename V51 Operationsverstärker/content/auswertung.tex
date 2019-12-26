@@ -139,42 +139,56 @@ Durch Augenmaß kann hier eine kritische Frequenz von $\SI{10}{kHz}$ bestimmt we
 \subsection{Untersuchung des Umkehr-Integrators und Differentiators}
 Es wird untersucht in welchem Bereich die theoretischen Zusammenhänge zwischen Ausgangsspannung und Frequenz erfüllt sind. Hierzu wird erneut die Ausgangsspannung für beide Aufbauten doppeltlogarithmisch gegen die Frequenz aufgetragen und die Steigung der auftretenden Gerade durch einen Fit ermittelt. Die Messwerte sowie die Ausgleichskurven sind in den Abb.\ref{integrator} und Abb.\ref{differentiator} dargestellt. Für beide Schaltungen wurde ein Kondensator mit einer Kapazität von $F=0{,}015\,\si{\micro\farad}$ und ein Widerstand mit $R=10\,\si{\kilo\ohm}$ genutzt. Für die Fitfunktion der Form:
 \begin{equation}
-U_A=m\cdot\nu^b\,,
+\log(U_A)=m\cdot\log(\nu)+b\,,
 \end{equation}
 ergeben sich die Parameter:
 \begin{align}
-\text{Umkehr-Differentiator:}&\quad \left(0{,}53\pm0{,}08\right)\frac{1}{\si{\Hz}}\cdot\nu^{1{,}01\pm0{,}03} \nonumber\\
-\text{Umkehr-Integrator:}&\quad \left(177\pm10\right)\frac{1}{\si{\Hz}}\cdot\nu^{-0{,}814\pm0{,}02}\nonumber
+\text{Umkehr-Differentiator:}\nonumber\\
+m&=\left(-0{,}81\pm0{,}02\right)\nonumber\\
+b&=\left(5{,}18\pm0{,}06\right)\nonumber\\
+\text{Umkehr-Integrator:}\nonumber\\
+m&=\left(1{,}01\pm0{,}03\right)\nonumber\\
+b&=\left(-0{,}6\pm0{,}2\right)\nonumber\\
 \end{align}
-Für den Umkehr-Differentiator ist festzustellen, dass der erwartete Zusammenhang zwischen Ausgangsspannung und Frequenz nur zwischen ca. $100\,\si{\Hz}\.-\.800\,\si{\Hz}$ vorliegt. Beim Umkehr-Integrator hingegen findet sich kein Bereich in welchem der theoretische Verlauf nicht erfüllt wird. Die integrierenden und differentierenden Eigenschaften der Schaltungen sind in den folgenden Oszilloskopbildern gut zu erkennen, hierbei ist das Eingangssignal stets gelb un das Signal der Schaltung grün.
 \begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{bilder/innegrator.png}
+  \caption{Die aufgenommenen Messwerte des Umkehr-Integrators mit linearer Regression}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{bilder/diffe.png}
+  \caption{Die aufgenommenen Messwerte des Umkehr-Differentiators mit linearer Regression}
+\end{figure}
+Für den Umkehr-Differentiator ist festzustellen, dass der erwartete Zusammenhang zwischen Ausgangsspannung und Frequenz nur zwischen ca. $100\,\si{\Hz}\.-\.800\,\si{\Hz}$ vorliegt. Beim Umkehr-Integrator hingegen findet sich kein Bereich in welchem der theoretische Verlauf nicht erfüllt wird. Die integrierenden und differentierenden Eigenschaften der Schaltungen sind in den folgenden Oszilloskopbildern gut zu erkennen, hierbei ist das Eingangssignal stets gelb un das Signal der Schaltung grün.
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{bilder/integrator1.png}
   \caption{Integrierte Sinusspannung}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{bilder/integrator2.png}
   \caption{Integrierte Dreiecksspannung}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{bilder/integrator3.png}
   \caption{Integrierte Rechtecksspannung}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{bilder/diff1.png}
   \caption{Differentierte Rechtecksspannung}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{bilder/diff2.png}
   \caption{Differentierte Sinusspannung?}%Vllt auch rausnehmen
 \end{figure}
 \subsection{Der Schmitt-Trigger}
 Die technischen Daten des Aufbaus des Schmitt-Triggers sind:
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{ccc}
 $U_{B,+}=12{,}75 \,\si{\V}$ \\
@@ -191,3 +205,4 @@ Der gemessene Schwellwert liegt bei
 \begin{equation}
 U_{+}=4{,}15\,\si{\V}
 \end{equation}
+Es liegt somit eine Abweichung von ca. $7\%$ vor.
