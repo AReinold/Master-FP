@@ -46,6 +46,22 @@ Als Parameter der Ausgleichsrechnung ergeben sich
   \label{abb:eichung}
 \end{figure}
 
+Insgesamt lassen sich somit die Magnetfelder für die im Experiment eingestellten Ströme zu \ref{tab:Bfelder} berechnen:
+
+\begin{table}[H]
+  \centering
+  \caption{Aus der linearen Ausgeichsrechnung bestimmte Magnetfelder $B$ für die im Experiment angelegten Ströme $I$.}
+  \label{tab:Bfelder}
+  \begin{tabular}{cc@{$\pm$}}
+    \toprule
+    {$I \:/\: \si{\ampere}$} & {$B \:/\: \si{\milli\tesla}$}\\
+    \midrule
+  2,5    &     422 & 34  \\
+  3,8    &    660 & 40  \\
+  6.0    &   1060 & 50   \\
+  \end{tabular}
+\end{table}
+
 \subsection{Messung des Landé-Faktors}
 Im Folgenden sollen nun die Breiten der Interferenzstreifen ohne angelegtes Magnetfeldes $\deltaup$ und unter Einfluss eines angelegten Magnetfeldes $\Deltaup$ bestimmt werden.
 Für die Wellenlängendifferenzen ergibt sich unter Verwendung der in Abschnitt \ref{sec:dispersion} bestimmten $\Deltaup \lambda$:
@@ -64,7 +80,7 @@ Für die Energie lässt sich $E=\frac{\hbar c}{\lambda}$ einsetzen und nach $\la
 \end{equation}
 Mittels des Pakets \textit{Fiji} werden nun die aufgenommenen Fotographien auf ihren Farbkontrast hin ausgewertet.
 Hierüber lassen sich die Abstände $\Deltaup$ und $\deltaup$ über die Funktion "Find Maxima" bestimmen.
-
+Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearbeitet worden, sodass eine Herausrechnen nicht nötig ist.
 \subsection{Vermessung der \texorpdfstring{$\sigma$}{sigma}-Komponente der roten Linie}
 
 \begin{table}[H]
@@ -146,7 +162,7 @@ Hierüber lassen sich die Abstände $\Deltaup$ und $\deltaup$ über die Funktion
   \caption{sigma BLAU 0mT.}
   \label{abb:plotsigmablau0mT}
 \end{figure}
------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \begin{table}[H]
   \centering
