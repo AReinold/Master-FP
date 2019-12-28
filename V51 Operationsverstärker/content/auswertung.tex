@@ -24,7 +24,7 @@ Für die Verstärker 1, 2 und 3 ist der Absolutbetrag des Logarithmus des Spannu
 Die Annahme, dass die Verstärkung direkt proportional zum Verhältnis der Widerstände der äußeren Beschaltung ist, rührt aus der Betrachtung des Operationsverstärkers als ideales Bauteil, sodass sich die Verstärkung nach \eqref{eq:V_linear} ergibt.\\
 Für alle vier Beschaltungen wird eine Eingangsspannung von $U_1=\SI{3}{V}$ verwendet.
 Zur Bestimmung der Grenzfrequenz $\nu_\text{Grenz}$ und des Verstärkung-Bandbreite-Produkts $V_0\nu_\text{Grenz}$ wird zunächst der konstante Verlauf der experimentellen Kennlinie untersucht. Aufgrund des anzunehmenden konstanten Wertes, wird jeweils der Mittelwert der in den Graphen als orange eingezeichneten Messwerte $\bar{V}_0$ gebildet.
-Für die Bestimmung der Grenzfrequenz $\nu_\text{Grenz}$ wird eine lineare Ausgleichsrechnung der Form
+Für die Bestimmung der Grenzfrequenz $\nu_\text{Grenz}$ wird eine Ausgleichsrechnung der Form
 \begin{equation}
   f(x)=mx^b
 \end{equation}
@@ -33,7 +33,7 @@ Hierüber lässt sich mittels
 \begin{equation}
   \nu_\text{Grenz}=\exp(\ln(V_0/\sqrt{2})-b/m)
 \end{equation}
-die Grenzfrequenz bestimmen sowie schließlich das Verstärkung-Bandbreite-Produkt $V'\nu_\text{Grenz}$, welches im Idealfall konstant sein soll. Die erhaltenen Ausgleichwerte sowie die daraus bestimmten Kenngrößen sind in Tabelle \ref{Werte_fit} zu finden. Aufgrund des Verlaufs des Graphen in Abbildung \ref{linear1}, für den der Verstärkungsteil auch nach Betragsbildung nicht eindeutig zugeordnet werden kann, bleibt dieser als weiterer Vergleichswert fragwürdig.
+die Grenzfrequenz bestimmen sowie schließlich das Verstärkung-Bandbreite-Produkt $V'\nu_\text{Grenz}$, welches im Idealfall konstant sein soll. Die erhaltenen Ausgleichswerte sowie die daraus bestimmten Kenngrößen sind in Tabelle \ref{Werte_fit} zu finden. Aufgrund des Verlaufs des Graphen in Abbildung \ref{linear1}, für den der Verstärkungsteil auch nach Betragsbildung nicht eindeutig zugeordnet werden kann, bleibt dieser als weiterer Vergleichswert fragwürdig.
 
 \begin{table}[H]
   \small
@@ -46,32 +46,32 @@ Verstärker 2 & $-\si{0,756\pm0,028}$ & $\si{14,1\pm0,4}$ & $\si{4,423}$ & $(2{,
 Verstärker 3 & $-\si{0,248\pm0,009}$ & $\si{4,69\pm0,07}$ & $\si{2,989}$ & $(8{,}0 \pm 6{,}0) \cdot 10^{6}$ & $(2{,}5 \pm 1{,}6) \cdot 10^{7}$\\
 Verstärker 4 & $-\si{0,815\pm0,010}$ & $\si{8,86\pm0,11}$ & $\si{0,143}$ & $(8{,}8 \pm 1{,}9) \cdot 10^{5}$ & $(1{,}25 \pm 0{,}27) \cdot 10^{5}$\\
 \end{tabular}
-\caption{Ergebnisse der linearen Ausgleichsrechnung und der mittels dieser berechneten Werte der Grenzfrequenz $\nu_\text{Grenz}$ und des Verstärkung-Bandbreite-Produkts GBP.}
+\caption{Ergebnisse der Ausgleichsrechnung und der mittels dieser berechneten Werte der Grenzfrequenz $\nu_\text{Grenz}$ und des Verstärkung-Bandbreite-Produkts GBP.}
 \label{Werte_fit}
 \end{table}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\textwidth]{Linearverstaerker_Anneke/A1.pdf}
-  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellograrithmischer Darstellung für den ersten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet. Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
+  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellogarithmischer Darstellung für den ersten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet. Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
   \label{linear1}
 \end{figure}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\textwidth]{Linearverstaerker_Anneke/A2.pdf}
-  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellograrithmischer Darstellung für den zweiten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
+  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellogarithmischer Darstellung für den zweiten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
   \label{linear2}
 \end{figure}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.65\textwidth]{Linearverstaerker_Anneke/A3.pdf}
-  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellograrithmischer Darstellung für den dritten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
+  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellogarithmischer Darstellung für den dritten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün. Für die Auswertung ignorierte Messwerte sind schwarz gezeichnet.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
   \label{linear3}
 \end{figure}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.65\textwidth]{Linearverstaerker_Anneke/A4.pdf}
-  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellograrithmischer Darstellung für den vierten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
+  \caption{Graphischer Verlauf des Verstärkungsfaktors $V'$ in Abhängigkeit der Frequenz $\nu$ in doppellogarithmischer Darstellung für den vierten beschalteten Linearverstärker. Die als konstant anzunehmenden Messwerte sind orangefarben markiert worden; die des Verstärkungsverlaufs grün.  Die in blau gezeichnete lineare Ausgleichsrechnung soll die Verstärkung annähern.}
   \label{linear4}
 \end{figure}
 \clearpage
@@ -137,7 +137,7 @@ Durch Augenmaß kann hier eine kritische Frequenz von $\SI{10}{kHz}$ bestimmt we
 % \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Untersuchung des Umkehr-Integrators und Differentiators}
-Es wird untersucht in welchem Bereich die theoretischen Zusammenhänge zwischen Ausgangsspannung und Frequenz erfüllt sind. Hierzu wird erneut die Ausgangsspannung für beide Aufbauten doppeltlogarithmisch gegen die Frequenz aufgetragen und die Steigung der auftretenden Gerade durch einen Fit ermittelt. Die Messwerte sowie die Ausgleichskurven sind in den Abb.\ref{integrator} und Abb.\ref{differentiator} dargestellt. Für beide Schaltungen wurde ein Kondensator mit einer Kapazität von $F=0{,}015\,\si{\micro\farad}$ und ein Widerstand mit $R=10\,\si{\kilo\ohm}$ genutzt. Für die Fitfunktion der Form:
+Es wird untersucht, in welchem Bereich die theoretischen Zusammenhänge zwischen Ausgangsspannung und Frequenz erfüllt sind. Hierzu wird erneut die Ausgangsspannung für beide Aufbauten doppeltlogarithmisch gegen die Frequenz aufgetragen und die Steigung der auftretenden Gerade durch eine Ausgleichsrechnung ermittelt. Die Messwerte sowie die Ausgleichskurven sind in den Abbildungen \ref{integrator} und \ref{differentiator} dargestellt. Für beide Schaltungen wurde ein Kondensator mit einer Kapazität von $F=0{,}015\,\si{\micro\farad}$ und ein Widerstand mit $R=10\,\si{\kilo\ohm}$ genutzt. Für die Regressionsfunktion der Form:
 \begin{equation}
 \log(U_A)=m\cdot\log(\nu)+b\,,
 \end{equation}
@@ -148,61 +148,82 @@ m&=-0{,}81\pm0{,}02\nonumber\\
 b&=5{,}18\pm0{,}06\nonumber\\
 \text{Umkehr-Integrator:}\nonumber\\
 m&=1{,}01\pm0{,}03\nonumber\\
-b&=-0{,}6\pm0{,}2\nonumber\\
+b&=-0{,}6\pm0{,}2\nonumber\,.\\
 \end{align}
+
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1\textwidth]{bilder/innegrator.png}
-  \caption{Die aufgenommenen Messwerte des Umkehr-Integrators mit linearer Regression}
+  \includegraphics[width=0.65\textwidth]{bilder/diffe.png}
+  \caption{Die aufgenommenen Messwerte der Ausgangsspannung des Umkehr-Differentiators gegen die Frequenz aufgetragen. Es zeigt sich ein annähernd linearer Zusammenhang, der durch eine lineare Ausgleichsrechnung extrapoliert wird.}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1\textwidth]{bilder/diffe.png}
-  \caption{Die aufgenommenen Messwerte des Umkehr-Differentiators mit linearer Regression}
+  \includegraphics[width=0.65\textwidth]{bilder/innegrator.png}
+  \caption{Die aufgenommenen Messwerte der Ausgangsspannung des Umkehr-Integrators gegen die Frequenz aufgetragen. Es zeigt sich ein annähernd linearer Zusammenhang, der durch eine lineare Ausgleichsrechnung extrapoliert wird.}
 \end{figure}
-Für den Umkehr-Differentiator ist festzustellen, dass der erwartete Zusammenhang zwischen Ausgangsspannung und Frequenz nur zwischen ca. $100\,\si{\Hz}\.-\.800\,\si{\Hz}$ vorliegt. Beim Umkehr-Integrator hingegen findet sich kein Bereich in welchem der theoretische Verlauf nicht erfüllt wird. Die integrierenden und differentierenden Eigenschaften der Schaltungen sind in den folgenden Oszilloskopbildern gut zu erkennen, hierbei ist das Eingangssignal stets gelb un das Signal der Schaltung grün.
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{bilder/integrator1.png}
-  \caption{Integrierte Sinusspannung}
+
+Für den Umkehr-Differentiator ist festzustellen, dass der erwartete Zusammenhang zwischen Ausgangsspannung und Frequenz nur zwischen ca. $100\,\si{\Hz}\.-\.800\,\si{\Hz}$ vorliegt. Beim Umkehr-Integrator hingegen lässt sich kein Bereich finden, in welchem der theoretische Verlauf nicht erfüllt wird. Die integrierenden und differentierenden Eigenschaften der Schaltungen sind in den folgenden Oszilloskopbildern \ref{fig:int} und \ref{fig:diff} gut zu erkennen, hierbei ist das Eingangssignal stets gelb und das Signal der Schaltung grün. Ein Thermodruck für eine Dreiecksspannung als Eingangsspannung für den Differentiator ist zwar aufgenommen worden, ist aber bei der Auswertung des Bildmaterials nicht aufgefunden worden. Es kann vermutet werden, dass das Oszilloskop diese Aufnahme nicht abgespeichert hat.
+\clearpage
+\begin{figure}[!ht]
+   \centering
+   \subfloat[test][Integrierte Sinusspannung.]{\includegraphics[width=.42\textwidth]{bilder/integrator1.png}}\quad
+   \subfloat[][Integrierte Dreiecksspannung.]{\includegraphics[width=.42\textwidth]{bilder/integrator2.png}}\\
+   \subfloat[][Integrierte Rechteckspannung.]{\includegraphics[width=.42\textwidth]{bilder/integrator3.png}}\quad
+   \caption{Graphische Aufnahme der Oszilloskopdaten für die Ausgangsspannung in Abhängigkeit unterschiedlicher Eingangssignale für einen Umkehr-Integrator. Die Eingangsspannung ist gelb, die Ausgangsspannung grün dargestellt.}
+   \label{fig:int}
 \end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{bilder/integrator2.png}
-  \caption{Integrierte Dreiecksspannung}
+\begin{figure}[!ht]
+   \centering
+   \subfloat[test][Differenzierte Rechteckspannung.]{\includegraphics[width=.42\textwidth]{bilder/diff1.png}}\quad
+   \subfloat[][Differenzierte Sinusspannung.]{\includegraphics[width=.42\textwidth]{bilder/diff2.png}}\\
+   \caption{Graphische Aufnahme der Oszilloskopdaten für die Ausgangsspannung in Abhängigkeit unterschiedlicher Eingangssignale für einen Umkehr-Differentiator. Die Eingangsspannung ist gelb, die Ausgangsspannung grün dargestellt.}
+   \label{fig:diff}
 \end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{bilder/integrator3.png}
-  \caption{Integrierte Rechtecksspannung}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{bilder/diff1.png}
-  \caption{Differentierte Rechtecksspannung}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{bilder/diff2.png}
-  \caption{Differentierte Sinusspannung}%Vllt auch rausnehmen
-\end{figure}
+\clearpage
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=1\textwidth]{bilder/integrator1.png}
+%   \caption{Integrierte Sinusspannung}
+% \end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=1\textwidth]{bilder/integrator2.png}
+%   \caption{Integrierte Dreiecksspannung}
+% \end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=1\textwidth]{bilder/integrator3.png}
+%   \caption{Integrierte Rechtecksspannung}
+% \end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=1\textwidth]{bilder/diff1.png}
+%   \caption{Differentierte Rechtecksspannung}
+% \end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=1\textwidth]{bilder/diff2.png}
+%   \caption{Differentierte Sinusspannung}%Vllt auch rausnehmen
+% \end{figure}
 \subsection{Der Schmitt-Trigger}
-Die technischen Daten des Aufbaus des Schmitt-Triggers sind:
+Die technischen Daten des Aufbaus des Schmitt-Triggers nach Abbildung \ref{schmitti} sind:
 \begin{table}[H]
 \centering
 \begin{tabular}{ccc}
 $U_{B,+}=12{,}75 \,\si{\V}$ \\
 $U_{B,-}=-13{,}8\,\si{V}$ \\
+$U_1=8{,}3\,\si{V}$ \\
 $R_1=10\,\si{\kilo\ohm}$ \\
-$R_p=33\,\si{\kilo\ohm}$ \\
+$R_p=33\,\si{\kilo\ohm}$\,. \\
 \end{tabular}
 \end{table}
-Mit (15) ergibt sich dann ein theoretischer Umschlagpunkt von
+Mit Formel \eqref{eq:schmitti} ergibt sich dann ein theoretischer Umschlagpunkt von
 \begin{equation}
-U_{+,\text{theo}}=3{,}86\,\si{\V}
+U_{+,\text{theo}}=3{,}86\,\si{\V}\,.
 \end{equation}
 Der gemessene Schwellwert liegt bei
 \begin{equation}
-U_{+}=4{,}15\,\si{\V}
+U_{+}=4{,}15\,\si{\V}\,.
 \end{equation}
 Es liegt somit eine Abweichung von ca. $7\%$ vor.
+\clearpage
