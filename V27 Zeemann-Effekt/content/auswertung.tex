@@ -11,10 +11,25 @@ soll ein möglichst exaktes Bestimmen des über den Strom $I$ eingestellen Magne
 Zu sehen ist dieser Zusammenhang in Abbildung \ref{abb:eichung}.
 Als Parameter der Ausgleichsrechnung ergeben sich
 \begin{align*}
-  a = \SI{183,3 \pm 7,9}{\milli\tesla\per\ampere},\\
-    b = \SI{-36,0 \pm 27,8}{\milli\tesla}\;.
+  a &= \SI{183,3 \pm 7,9}{\milli\tesla\per\ampere},\\
+    b &= \SI{-36,0 \pm 27,8}{\milli\tesla}\;.
 \end{align*}
 
+Insgesamt lassen sich somit die Magnetfelder für die im Experiment eingestellten Ströme zu \ref{tab:Bfelder} berechnen:
+\begin{table}[H]
+  \centering
+  \caption{Aus der linearen Ausgeichsrechnung bestimmte Magnetfelder $B$ für die im Experiment angelegten Ströme $I$.}
+  \label{tab:Bfelder}
+  \begin{tabular}{cc}
+    \toprule
+    {$I \:/\: \si{\ampere}$} & {$B \:/\: \si{\milli\tesla}$}\\
+    \midrule
+  2,5 & 422 \pm 34 \\
+  3,8 & 660 \pm 40 \\
+  6,0 & 1060 \pm 50
+  \end{tabular}
+\end{table}
+\clearpage
 \begin{table}[H]
   \centering
   \caption{Messwerte der Magnetfeldstärke $B$ in Abhängigkeit der Stromstärke $I$ des verwendeten Elektromagneten jeweils bei ansteigenden und abfallenden Feldern.}
@@ -26,14 +41,14 @@ Als Parameter der Ausgleichsrechnung ergeben sich
   0.0    &     5,5  &    6,3  \\
   0.5    &    111,8  &   105,3  \\
   1.0    &   155,5  &  163,7  \\
-  1.6    &   242,4  &  244,1  \\
+  1.5    &   242,4  &  244,1  \\
   2.0    &   318,2  &  310,3  \\
   2.5    &   390,0  &  406,9  \\
   3.0    &   469,9  &  474,7  \\
   3.5    &   550,7  &  554,9  \\
   4.0    &   629,2  &  642,8  \\
-  4.6    &   734,7  &  746,6  \\
-  5.1    &   880,9  &  879,2  \\
+  4.5    &   734,7  &  746,6  \\
+  5.0    &   880,9  &  879,2  \\
   5.5    &   1042,0  &  1015,4  \\
   6.0    &   1150,5  &  1150,5  \\
   \end{tabular}
@@ -45,25 +60,9 @@ Als Parameter der Ausgleichsrechnung ergeben sich
   \caption{Das mit einer Hall-Sonde gemessene Magnetfeld $B$ in Abhängigkeit des eingestellten Stroms $I$ für ein Auf- und ein Absteigen. Ebenso eine lineare Ausgleichsrechnung zur Bestimmung des Wertepaarzusammenhangs.}
   \label{abb:eichung}
 \end{figure}
-
-Insgesamt lassen sich somit die Magnetfelder für die im Experiment eingestellten Ströme zu \ref{tab:Bfelder} berechnen:
-
-\begin{table}[H]
-  \centering
-  \caption{Aus der linearen Ausgeichsrechnung bestimmte Magnetfelder $B$ für die im Experiment angelegten Ströme $I$.}
-  \label{tab:Bfelder}
-  \begin{tabular}{cc@{$\pm$}}
-    \toprule
-    {$I \:/\: \si{\ampere}$} & {$B \:/\: \si{\milli\tesla}$}\\
-    \midrule
-  2,5    &     422 & 34  \\
-  3,8    &    660 & 40  \\
-  6.0    &   1060 & 50   \\
-  \end{tabular}
-\end{table}
-
+\clearpage
 \subsection{Messung des Landé-Faktors}
-Im Folgenden sollen nun die Breiten der Interferenzstreifen ohne angelegtes Magnetfeldes $\deltaup$ und unter Einfluss eines angelegten Magnetfeldes $\Deltaup$ bestimmt werden.
+Im Folgenden sollen nun die Breiten der Interferenzstreifen ohne angelegtes Magnetfeld $\deltaup$ und unter Einfluss eines angelegten Magnetfeldes $\Deltaup$ bestimmt werden.
 Für die Wellenlängendifferenzen ergibt sich unter Verwendung der in Abschnitt \ref{sec:dispersion} bestimmten $\Deltaup \lambda$:
 \begin{equation}
   \deltaup \lambda = \frac{1}{2}\frac{\deltaup s}{\Deltaup s}\Deltaup \lambda\,.
@@ -76,17 +75,23 @@ Die Energiedifferenz aufgrund eines angelegten Magnetfeldes ergibt sich zu
 Für die Energie lässt sich $E=\frac{\hbar c}{\lambda}$ einsetzen und nach $\lambda$ ableiten.
 Über Umformen des für $\deltaup \lambda$ eingesetzten Zusammenhangs \eqref{eq:difflambda} nach dem Landé-Faktor ergibt sich für die erlaubten Übergänge mit $|\Deltaup m|=1$
 \begin{equation}
-  g=\frac{\hbar c \delta \lambda}{\lambda^2 \mu_B B}\,.
+  g=\frac{\hbar c \deltaup \lambda}{\lambda^2 \mu_B B}\,.
+  \label{eq:g}
 \end{equation}
 Mittels des Pakets \textit{Fiji} werden nun die aufgenommenen Fotographien auf ihren Farbkontrast hin ausgewertet.
-Hierüber lassen sich die Abstände $\Deltaup$ und $\deltaup$ über die Funktion "Find Maxima" bestimmen.
-Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearbeitet worden, sodass eine Herausrechnen nicht nötig ist.
+Hierüber lassen sich die Abstände $\Deltaup$ und $\deltaup$ bestimmen.
+Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearbeitet worden, sodass ein Herausrechnen nicht nötig ist.
 \subsection{Vermessung der \texorpdfstring{$\sigma$}{sigma}-Komponente der roten Linie}
+Zu Beginn werden die erhaltenen Maxima aus Tabelle \ref{tab:sigmarot660mT} gezählt und mithilfe der Abstände auf einen gemittelten Abstand von
+\begin{equation}
+\deltaup s= \SI{59,05}{px}
+\end{equation}
+heruntergerechnet. Da bei der Versuchsdurchführung kein Bild von dieser Polarisation ohne Magnetfeld aufgenommen wurde, muss hier eine weitere Auswertung entfallen.
 
 \begin{table}[H]
   \centering
-  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die rote Spektrallinie mit einem angelegten Magnetfeld $B=\SI{621}{\milli\tesla}$  unter einem Polarisationswinkel von $0°$.}
-  \label{tab:277-Max}
+  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die rote Spektrallinie mit einem angelegten Magnetfeld $B=\SI{660 \pm 40}{\milli\tesla}$  unter einem Polarisationswinkel von $0°$.}
+  \label{tab:sigmarot660mT}
   \begin{tabular}{c|cc}
     \toprule
     {Nummer} & {$x \:/\: \si{px}$} & {$y \:/\: \text{bel. Einheiten}$}\\
@@ -114,24 +119,38 @@ Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearb
 \end{table}
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{bilder/2995_ROT_621mT_sigma.jpg}
-  \caption{sigma ROT 621mT.}
-  \label{abb:sigmarot621mT}
+  \includegraphics[width=0.5\textwidth]{bilder/2995_ROT_621mT_sigma.jpg}
+  \caption{Fotographie der Interferenzlinien der Lummer-Gehrcke-Platte für die $\sigma$-Linie des roten Lichts bei einem angelegten Magnetfeld von $B=\SI{660 \pm 40}{\milli\tesla}$.}
+  \label{abb:sigmarot660mT}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/sigmaROT_620mT.PNG}
-  \caption{sigma ROT 621mT.}
-  \label{abb:plotsigmarot621mT}
+  \caption{Kontrastauswertung der Interferenzintensität für die $\sigma$-Linie des roten Lichts bei einem angelegten Magnetfeld von $B=\SI{660 \pm 40}{\milli\tesla}$. Aufgetragen ist die Intensität in beliebigen Einheiten gegen den Abstand in $x$-Richtung in Einheiten von Pixeln.}
+  \label{abb:plotsigmarot660mT}
 \end{figure}
 
-
 \subsection{Vermessung der \texorpdfstring{$\sigma$}{sigma}-Komponente der blauen Linie}
+Für die $\sigma$-Komponente sind Bilder mit und ohne Magnetfeld aufgenommen worden, sodass hier eine komplette Auswertung vorgenommen werden kann. Betrachtet man Tabelle \ref{tab:sigmablau0mT}, so lässt sich ein mittlerer Abstand von
+\begin{equation}
+  \Deltaup s=\SI{104,5}{px}
+\end{equation}
+bestimmen. Die zugeschnittene Bildaufnahme ist in Abbildung \ref{abb:sigmablau0mT} zu sehen; der Grayscale-Auswertungsplot zur Bestimmung der Intensitätsmaxima in Abbildung \ref{abb:plotsigmablau0mT}.\\
+Nach Zuschalten eines Magnetfeldes von $B=\SI{422\pm34}{\milli\tesla}$ ergeben sich folgende Abbildungen \ref{abb:sigmablau0mT} und \ref{abb:plotsigmablau0mT}. Mithilfe von Tabelle \ref{tab:sigmablau422mT} kann ein gemittelter Maximaabstand von
+\begin{equation}
+\deltaup s=\SI{99,9}{px}
+\end{equation}
+ermittelt werden.
+Über die Formeln \eqref{eq:difflambda} und \eqref{eq:g} lässt sich ein g-Faktor für die blaue $\sigma$-Linie von
+\begin{equation}
+ g_{\text{blau},\sigma}=2,94
+\end{equation}
+bestimmt werden. Dem Vergleich mit dem Theoriewert, der sich als Mittelwert von 1,5 und 2,0 zu $g_{\text{blau},\sigma,\text{theo}}=1,75$ ergibt, folgt eine Abweichung von $\SI{68}{\%}$.
 
 \begin{table}[H]
   \centering
-  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\Deltaup s$ für die blaue Spektrallinie ohne angelegtes Magnetfeld  unter einem Polarisationswinkel von $0°$.}
-  \label{tab:277-Max}
+  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\Deltaup s$ für die blaue Spektrallinie ohne angelegtes Magnetfeld unter einem Polarisationswinkel von $0°$.}
+  \label{tab:sigmablau0mT}
   \begin{tabular}{c|cc}
     \toprule
     {Nummer} & {$x \:/\: \si{px}$} & {$y \:/\: \text{bel. Einheiten}$}\\
@@ -152,22 +171,21 @@ Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearb
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{bilder/3000_BLAU_0mT_sigma.jpg}
-  \caption{sigma BLAU 0mT.}
+  \includegraphics[width=0.5\textwidth]{bilder/3000_BLAU_0mT_sigma.jpg}
+  \caption{Fotographie der Interferenzlinien der Lummer-Gehrcke-Platte für die $\sigma$-Linie des blauen Lichts ohne ein angelegtes Magnetfeld.}
   \label{abb:sigmablau0mT}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/sigmaBLAU_0mT.PNG}
-  \caption{sigma BLAU 0mT.}
+  \caption{Kontrastauswertung der Interferenzintensität für die $\sigma$-Linie des blauen Lichts ohne angelegtes Magnetfeld. Aufgetragen ist die Intensität in beliebigen Einheiten gegen den Abstand in $x$-Richtung in Einheiten von Pixeln.}
   \label{abb:plotsigmablau0mT}
 \end{figure}
-%-------------------------------------------------------------------------------
-
+%---------------------------------------------------------------------------------------------
 \begin{table}[H]
   \centering
-  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die blaue Spektrallinie mit einem angelegten Magnetfeld $B=\SI{300}{\milli\tesla}$  unter einem Polarisationswinkel von $0°$.}
-  \label{tab:277-Max}
+  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die blaue Spektrallinie mit einem angelegten Magnetfeld $B=\SI{422\pm34}{\milli\tesla}$  unter einem Polarisationswinkel von $0°$.}
+  \label{tab:sigmablau422mT}
   \begin{tabular}{c|cc}
     \toprule
     {Nummer} & {$x \:/\: \si{px}$} & {$y \:/\: \text{bel. Einheiten}$}\\
@@ -187,23 +205,71 @@ Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearb
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{bilder/3003_BLAU_300mT_sigma.jpg}
-  \caption{sigma BLAU 300mT.}
-  \label{abb:sigmablau300mT}
+  \includegraphics[width=0.5\textwidth]{bilder/3003_BLAU_300mT_sigma.jpg}
+  \caption{Fotographie der Interferenzlinien der Lummer-Gehrcke-Platte für die $\sigma$-Linie des blauen Lichts bei einem angelegten Magnetfeld von $B=\SI{422\pm34}{\milli\tesla}$.}
+  \label{abb:sigmablau422mT}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/sigmaBLAU_300mT.PNG}
-  \caption{sigma BLAU 300mT.}
-  \label{abb:plotsigmablau300mT}
+  \caption{Kontrastauswertung der Interferenzintensität für die $\sigma$-Linie des blauen Lichts bei einem angelegten Magnetfeld von $B=\SI{422\pm34}{\milli\tesla}$. Aufgetragen ist die Intensität in beliebigen Einheiten gegen den Abstand in $x$-Richtung in Einheiten von Pixeln.}
+  \label{abb:plotsigmablau422mT}
 \end{figure}
-
-\subsection{Vermessung der \texorpdfstring{$\pi$}{pi}-Komponente der roten Linie}
-
+\clearpage
+\subsection{Vermessung der \texorpdfstring{$\pi$}{pi}-Komponente der blauen Linie}
+Gleiches Vorgehen folgt ebenso für die $\pii$-Komponente der blauen Linie.
+Es folgen
+\begin{equation}
+  \Deltaup s=\SI{100,8}{px}
+\end{equation}
+und
+\begin{equation}
+  \deltaup s=\SI{83,29}{px}\,.
+\end{equation}
+Folgend ist ein g-Faktor von
+\begin{equation}
+  g_{\text{blau},\pii}=1,01
+\end{equation}
+und eine Abweichung von $\SI{50}{\%}$ von dem Theoriewert von $g_{\text{blau},\sigma,\text{theo}}=0,5$.
 \begin{table}[H]
   \centering
-  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die blaue Spektrallinie mit einem angelegten Magnetfeld $B=\SI{1100}{\milli\tesla}$ unter einem Polarisationswinkel von $90°$.}
-  \label{tab:277-Max}
+  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\Deltaup s$ für die blaue Spektrallinie ohne angelegtes Magnetfeld unter einem Polarisationswinkel von $90°$.}
+  \label{tab:piblau0mT}
+  \begin{tabular}{c|cc}
+    \toprule
+    {Nummer} & {$x \:/\: \si{px}$} & {$y \:/\: \text{bel. Einheiten}$}\\
+    \midrule
+ 1 &  32   &	 50,38 \\
+ 2 &  152  &	 56,97 \\
+ 3 &  260  &	 61,86 \\
+ 4 &  365  &	 65,09 \\
+ 5 &  469  &	 65,66 \\
+ 6 &  567  &	 65,99 \\
+ 7 &  667  &	 66,51 \\
+ 8 &  760  &	 65,53\\
+ 9 &  859  &   64,31 \\
+10 &  948  &	 62,67 \\
+11 &  1040  &	 62,72 \\
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{bilder/3001_BLAU_0mT_pi.jpg}
+  \caption{Fotographie der Interferenzlinien der Lummer-Gehrcke-Platte für die $\pi$-Linie des blauen Lichts ohne angelegtes Magnetfeld.}
+  \label{abb:piblau0mT}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{bilder/pi_BLAU_0mT.PNG}
+  \caption{Kontrastauswertung der Interferenzintensität für die $\pi$-Linie des blauen Lichts ohne ein angelegtes Magnetfeld. Aufgetragen ist die Intensität in beliebigen Einheiten gegen den Abstand in $x$-Richtung in Einheiten von Pixeln.}
+  \label{abb:plotpiblau0mT}
+\end{figure}
+%--------------------------------------------------------------------------------
+\begin{table}[H]
+  \centering
+  \caption{Mit dem Programm \textit{Fiji} \cite{Fiji} ausgelesene Intensitätsmaxima zur Bestimmung der Abstände $\deltaup s$ für die blaue Spektrallinie mit einem angelegten Magnetfeld $B=\SI{1060 \pm 50}{\milli\tesla}$ unter einem Polarisationswinkel von $90°$.}
+  \label{tab:piblau1060mT}
   \begin{tabular}{c|cc}
     \toprule
     {Nummer} & {$x \:/\: \si{px}$} & {$y \:/\: \text{bel. Einheiten}$}\\
@@ -228,13 +294,13 @@ Bei der Aufnahme der Bilder ist mit einem konstanten Zoom von \textit{30x} gearb
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{bilder/3009_BLAU_1100mT_pi.jpg}
-  \caption{sigma BLAU 300mT.}
-  \label{abb:piblau1100mT}
+  \includegraphics[width=0.5\textwidth]{bilder/3009_BLAU_1100mT_pi.jpg}
+  \caption{Fotographie der Interferenzlinien der Lummer-Gehrcke-Platte für die $\pi$-Linie des blauen Lichts bei einem angelegten Magnetfeld von $B=\SI{1060 \pm 50}{\milli\tesla}$.}
+  \label{abb:piblau1060mT}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/pi_BLAU_1100mT.PNG}
-  \caption{sigma BLAU 300mT.}
-  \label{abb:plotpiblau1100mT}
+  \caption{Kontrastauswertung der Interferenzintensität für die $\pi$-Linie des blauen Lichts bei einem angelegten Magnetfeld von $B=\SI{1060 \pm 50}{\milli\tesla}$. Aufgetragen ist die Intensität in beliebigen Einheiten gegen den Abstand in $x$-Richtung in Einheiten von Pixeln.}
+  \label{abb:plotpiblau1060mT}
 \end{figure}
