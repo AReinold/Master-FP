@@ -13,7 +13,7 @@ plt.rcParams['text.latex.unicode'] = True
 plt.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 plt.rcParams['text.latex.preamble'] = [r'\usepackage{siunitx}']
 
-f, U = np.genfromtxt('e.txt', unpack = True)
+f, U = np.genfromtxt('d.txt', unpack = True)
 #f_log=np.log(f)
 #U_log=np.log(U)
 plt.plot(f,U,'r.',label='Messwerte')
@@ -22,8 +22,8 @@ plt.xscale('log')
 plt.yscale('log')
 def fx(x,m,b):
     return m*x**b
-ParamsI, CovarianceI = curve_fit(fx, f[1:6], U[1:6])
-i1 = np.linspace(100, 1000, 10000)
+ParamsI, CovarianceI = curve_fit(fx, f, U)
+i1 = np.linspace(10, 300, 10000)
 ErrorsI = np.sqrt(np.diag(CovarianceI))
 m = ufloat(ParamsI[0], ErrorsI[0])
 b = ufloat(ParamsI[1], ErrorsI[1])
