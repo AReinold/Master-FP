@@ -1,6 +1,6 @@
 \section{Theorie}\label{theorie}
 \subsection{Eigenschaften idealer Operationsverstärker}
-Soll Verständnis über die Funktionsweise von Operationsverstärkern erlangt werden, so kann es helfen, diese auf ein paar ideale Eigenschaften zu beschränken. Werden mit diesen Annahmen Berechnungen durchgeführt, fallen nur geringe Abweichungen auf und die reduzierten Rechenregeln können als plausible Grundlage verwendet werden.
+Soll Verständnis über die Funktionsweise von Operationsverstärkern erlangt werden, so kann es helfen, diese auf ein paar ideale Eigenschaften zu beschränken. Werden mit diesen Annahmen Berechnungen durchgeführt, fallen im Regelfall nur geringe Abweichungen auf und die reduzierten Rechenregeln können als überzeugende Grundlage verwendet werden.
 Im Generellen kann gesagt werden, dass ein Operationsverstärker als gleichstromgekoppelter Differenzverstärker arbeitet.
 Ein unbeschalteter Aufbau eines Operationsverstärkers ist in Abbildung \ref{unbeschaltet} zu sehen.
 
@@ -12,11 +12,11 @@ Ein unbeschalteter Aufbau eines Operationsverstärkers ist in Abbildung \ref{unb
 \end{figure}
 
 Zu erkennen ist, dass ein jener über einen invertierenden~$(-)$  und einen nicht-invertierenden $(+)$  Anschluss verfügt, über den eine Besteuerung erfolgt. Diesen gefolgt ist ein Ausgang $U_\text{A}$, über den das Ausgangssignal abgegriffen werden kann.
-Im benannten Idealfall gilt eine Proportionalität zwischen der Differenz der beiden Eingangssignale und dem resultierenden Ausgangssignal
+Im Idealfall gilt eine Proportionalität $V$ zwischen der Differenz der beiden Eingangssignale $U_-$ und $U_+$ und dem resultierenden Ausgangssignal:
 \begin{equation}
   U_\text{A}=V(U_+-U_-)\,.
 \end{equation}
-Dieser Zusammenhang ist alleinig innerhalb des Aussteuerungsbereichs des Verstärkers gültig. Dieser ist durch die, wie in Abbildung \ref{unbeschaltet} zu sehen ist, angelegte Betriebsspannung $\pm U_\text{B}$ festgelegt und nur innerhalb dieses Bereichs kann eine Verstärkung des Signals erfolgen. Übersteigt das Ausgangssignal in seiner Größe diesen Wertebereich, folgt ein konstanter Wert $U_\text{B}$ am Ausgang.
+Dieser Zusammenhang ist für einen realen Operationsverstärker, abgesehen von im Experiment auftretbaren Überschwingern, alleinig innerhalb des Aussteuerungsbereichs des Verstärkers gültig. Dieser ist durch die, wie in Abbildung \ref{unbeschaltet} zu sehen ist, angelegte Betriebsspannung $\pm U_\text{B}$ festgelegt und nur innerhalb dieses Bereichs kann eine Verstärkung $V$ des Eingangssignals erfolgen. Übersteigt das Ausgangssignal in seiner Größe diesen Wertebereich, folgt ein konstanter Wert $U_\text{B}$ am Ausgang.
 Es gilt somit
 \begin{equation}
   -U_\text{B} < U_\text{A} < +U_\text{B}\,.
@@ -26,7 +26,7 @@ Grafisch ergibt sich die in Abbildung \ref{kennlinie} dargestellte Kennlinie.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.45\textwidth]{bilder/kennlinie.png}
-  \caption{Typische Kennlinie eines Operationsverstärkers mit dem linearen Verhalten innerhalb des Ansteuerungsbereichs \cite{anleitung}.}
+  \caption{Typische Kennlinie eines realen Operationsverstärkers mit dem linearen Verhalten innerhalb des Ansteuerungsbereichs \cite{anleitung}.}
   \label{kennlinie}
 \end{figure}
 
@@ -36,7 +36,7 @@ Die differentiellen Widerstände für Eingang und Ausgang liegen auch in ihren G
 Idealerweise liegt der Eingangswiderstand im Unendlichen; der Ausgangswiderstand beeinflusst das Signal kaum und sollte möglichst den Wert Null annehmen.
 Hieraus folgen die wichtigsten Regeln für Berechnungen von Operationsverstärkerbeschaltungen:
 \begin{align*}
-1.\quad& \text{Es wird versucht, bis ins Unendliche zu verstärken:}\\
+1.\quad& \text{Nach Möglichkeit Verstärkung bis ins Unendliche:}\\
 &\quad V=\infty\\
 2.\quad& \text{Die Differenz der Eingangsspannungen ist Null:}\\
 &\quad U_\text{D}=U_+-U_-=0\\
@@ -47,8 +47,9 @@ Hieraus folgen die wichtigsten Regeln für Berechnungen von Operationsverstärke
 Werden reale Operationsverstärker betrachtet, so wird sich für weitere Kenngrößen interessiert.
 Eine charakteristische Kenngröße ist die Gleichtaktverstärkung
 \begin{equation}
-V_\text{Gl}=\frac{\text{\Delta}U_\text{A}}{\text{\Delta}U_\text{Gl}}\,.
+V_\text{Gl}=\frac{\text{\Delta}U_\text{A}}{\text{\Delta}U_\text{Gl}}\,,
 \end{equation}
+mit einer selben Spannung $U_\text{Gl}$ an beiden Eingängen.
 Wird an den beiden Eingängen dieselbe Spannung angelegt, so würde bei einem idealen Operationsverstärker $U_A=0$ folgen.
 Bei einem realen Operationsverstärker ist demnach die Gleichtaktverstärkung ein Maß für die Verzerrung innerhalb des Verstärkerbauteils.\\
 Da reale Operationsverstärker endliche Eingangsströme besitzen, wird der Eingangsruhestrom
@@ -73,7 +74,7 @@ und der Offsetspannung
 \subsection{Schaltungen mit Operationsverstärkern}
 In den folgenden Unterkapiteln werden weiterführende Beschaltungen eines Operationsverstärkers betrachtet. Es handelt sich um Standard-Beschaltungen, die einfache Rechenoperationen darstellen können.
 \subsubsection{Invertierender Verstärker}
-  Bei einem invertierenden Verstärker, auch Linearverstärker genannt, wird mit einer Gegenkopplung gearbeitet. Dies beschreibt das Rückführen des Ausgangssignals auf den invertierenden Eingang, was zum Ziel hat, eine Dämpfung darzustellen und Verzerrungen im Ausgangssignal entgegenzuwirken.
+  Bei einem invertierenden Verstärker, auch Linearverstärker genannt, wird mit einer Gegenkopplung gearbeitet. Dies beschreibt das Rückführen des Ausgangssignals auf den invertierenden Eingang, was zum Ziel hat, eine Dämpfung zu erzeugen und Verzerrungen im Ausgangssignal entgegenzuwirken.
   Ein Schaltbeispiel ist in Abbildung \ref{invert} zu sehen.
 
   \begin{figure}[H]
@@ -97,7 +98,7 @@ Aufgrund der sehr großen Leerlaufverstärkung wird $U_\text{N}=0$ angenommen un
     U_\text{N}=-\frac{U_\text{A}}{V}
   \end{equation}
   folgern.
-  Mit $I_\text{N}=0$ kann daraus für den Knotenpunkt A die Relation
+  Mit der Annahme $I_\text{N}=0$ kann daraus für den Knotenpunkt A die Relation
   \begin{equation}
     \frac{U_\text{N}-U_1}{U_\text{A}-U_1}=\frac{R_1}{R_1+R_\text{N}}
   \end{equation}
@@ -124,7 +125,7 @@ Für den Knoten A lässt sich mit der Knotenregel
 \begin{equation}
   U_\text{A}=-\frac{1}{RC}\int_{}^{} U_1(t) \ dt
 \end{equation}
-aufstellen. Gibt man ein sinusförmiges Eingangssignal $U_1=U_0\sin(\omega t)$ auf die Schaltung, folgt $U_\text{A}=\frac{U_0}{\omega RC}\cos(\omega t)$ als integriertes Ausgangssignal $U_\text{A}$. Ablesen lässt sich ebenso die Antiproportionalität der Ausgangsspannung zur Frequenz $\omega$.
+aufstellen. Gibt man ein sinusförmiges Eingangssignal $U_1=U_0\sin(\omega t)$ auf die Schaltung, folgt $U_\text{A}=\frac{U_0}{\omega RC}\cos(\omega t)$ als integriertes Ausgangssignal $U_\text{A}$. Erkennen lässt sich ebenso die Antiproportionalität der Ausgangsspannung zur Frequenz $\omega$.
 \subsubsection{Umkehr-Differentiator}
 Werden Widerstand und Kondensator in der Schaltung des Umkehr-Integrators vertauscht, so wird eine Umkehr-Differentiator-Schaltung, wie in Abbildung \ref{differentiator} gezeigt ist, erstellt.
 
@@ -139,7 +140,7 @@ Für einen solchen lässt sich die Beziehung
 \begin{equation}
   U_\text{A}=-RC\frac{dU_1}{dt}
 \end{equation}
-für die Ausgangsspannung herleiten. Wird wiederum eine Sinusspannung als Eingangssignal $U_1=U_0\sin(\omega t)$ verwendet, folgt somit $U_\text{A}=-\omega RCU_0\cos(\omega t)$. Hierbei ist die Amplitude der Ausgangsspannung direkt proportional zu der Frequenz $\omega$.
+für die Ausgangsspannung herleiten. Wird wiederum eine Sinusspannung als Eingangssignal $U_1=U_0\sin(\omega t)$ verwendet, folgt somit $U_\text{A}=-\omega RCU_0\cos(\omega t)$. Hierbei ist die Amplitude der Ausgangsspannung direkt proportional zu der Kreisfrequenz $\omega$.
 \subsection{Schmitt-Trigger}
 Der Schmitt-Trigger ist ein prominentes Beispiel einer Schaltung, die mit einer sogenannten Mitkopplung arbeitet. Wie in Abbildung \ref{schmitti} zu sehen ist, wird das Ausgangssignal auf den nicht-invertierenden Eingang zurückgekoppelt. Hierbei soll das Ausgangssignal dem Eingang nicht entgegenwirken, sondern diesen verstärken. Dies ermöglicht der Schaltung die Eigenschaften eines Schalters. Das bedeutet, dass der Operationsverstärker bei einem gewissen Eingangswert schlagartig die Ausgangsspannung von einem Zustand in einen anderen kippen lässt.
 Dies ist der sogenannte Schwellenwert
@@ -147,7 +148,7 @@ Dies ist der sogenannte Schwellenwert
 U_+=\frac{R_1}{R_\text{p}}U_\text{B}\,.
 \label{eq:schmitti}
 \end{equation}
-Wird der Wert $U_+$ überschritten, springt $U_A$ auf $+U_B$; ebenfalls springt $U_\text{A}$ auf $-U_\text{B}$, wenn der Schwellenwert von $-\frac{R_1}{R_\text{p}}U_\text{B}$ unterschritten wird.
+Wird der Wert $U_+$ überschritten, springt $U_A$ auf den Wert $+U_B$; ebenfalls springt $U_\text{A}$ auf den Wert $-U_\text{B}$, wenn der Schwellenwert von $-\frac{R_1}{R_\text{p}}U_\text{B}$ unterschritten wird.
 
 \begin{figure}[H]
   \centering
