@@ -18,6 +18,23 @@ V_log4 = np.log(Ua4/U_0)
 V_04 = np.mean(V_log4[:7])
 
 print('V_04:',np.exp(V_04))
+
+V_log40=V_log4[0]
+V_log41=V_log4[1]
+V_log42=V_log4[2]
+V_log43=V_log4[3]
+V_log44=V_log4[4]
+V_log45=V_log4[5]
+V_log46=V_log4[6]
+
+print(V_log40)
+print(V_log41)
+print(V_log42)
+print(V_log43)
+print(V_log44)
+print(V_log45)
+print(V_log46)
+
 print(V_04)
 # lineare Regression
 def fit(x, a, b):

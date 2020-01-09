@@ -106,6 +106,15 @@ Aufgrund der sehr großen Leerlaufverstärkung wird $U_\text{N}=0$ angenommen un
   \begin{equation}
     \frac{1}{V'}=\frac{1}{V}+\frac{R_1}{R_\text{N}}\,.
   \end{equation}
+  Wird die Verstärkung in Abhängigkeit der Frequenz des Eingangssignals betrachtet, so ist auffällig, dass die Verstärkung nicht im Betrag linear mit der Frequenz anwächst. Vielmehr muss insbesondere für einen Linearverstärker die Frequenzabhängigkeit untersucht werden. Es zeigt sich oft ein Verhalten, wie es Abbildung \ref{abb:bandbreite} zeigt.
+  Die Bandbreite ist der Begriff für das Frequenzintervall, in dem die Verstärkung auf den Faktor $\frac{1}{\sqrt{2}}$ abgefallen ist. Diese Frequenz wird Grenzfrequenz $\nu_\text{Grenz}$ genannt. Für den weiteren Text wird die Verstärkung in ihrem Maximalwert vor dem Abfall mit $V_0$ bezeichnet.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{bilder/bandbreite.png}
+    \caption{Exemplarisches Auftragen des Logarithmus der Verstärkung gegen den Logarithmus der Frequenz des Eingangssignals. Es zeigt sich ein Frequenzband, in dem ein linearer Zusammenhang auftritt \cite{anleitung}.}
+    \label{abb:bandbreite}
+  \end{figure}
+
 \subsubsection{Umkehr-Integrator}
 Über einen Kondensator $C$, der in den Rückkopplungskreis eingebaut wird, kann das Eingangssignal integriert werden. Zu sehen ist eine solche Integrator-Schaltung in Abbildung \ref{integrator}.
 
@@ -142,8 +151,11 @@ Für einen solchen lässt sich die Beziehung
 \end{equation}
 für die Ausgangsspannung herleiten. Wird wiederum eine Sinusspannung als Eingangssignal $U_1=U_0\sin(\omega t)$ verwendet, folgt somit $U_\text{A}=-\omega RCU_0\cos(\omega t)$. Hierbei ist die Amplitude der Ausgangsspannung direkt proportional zu der Kreisfrequenz $\omega$.
 \subsection{Schmitt-Trigger}
-Der Schmitt-Trigger ist ein prominentes Beispiel einer Schaltung, die mit einer sogenannten Mitkopplung arbeitet. Wie in Abbildung \ref{schmitti} zu sehen ist, wird das Ausgangssignal auf den nicht-invertierenden Eingang zurückgekoppelt. Hierbei soll das Ausgangssignal dem Eingang nicht entgegenwirken, sondern diesen verstärken. Dies ermöglicht der Schaltung die Eigenschaften eines Schalters. Das bedeutet, dass der Operationsverstärker bei einem gewissen Eingangswert schlagartig die Ausgangsspannung von einem Zustand in einen anderen kippen lässt.
-Dies ist der sogenannte Schwellenwert
+Der Schmitt-Trigger ist ein prominentes Beispiel einer Schaltung, die mit einer sogenannten Mitkopplung arbeitet. Wie in Abbildung \ref{schmitti} zu sehen ist, wird das Ausgangssignal auf den nicht-invertierenden Eingang zurückgekoppelt. Hierbei soll das Ausgangssignal dem Eingang nicht entgegenwirken, sondern diesen verstärken.
+Im Gegensatz zu zum Beispiel Transistoren besitzen Schmitt-Trigger zwei klar definierte Werte für die Schaltschwelle, bei der der Zustand umklappt. Ein Schmitt-Trigger kann somit als Sinus-Rechteck-Wandler arbeiten. Wird ein Sinussignal in den Eingang gegeben, so steigt die Spannung am Schmitt-Trigger zunächst an. Das geschieht solange, bis die Spannung einen kritischen Wert, dem der Schaltschwelle erreicht hat. Der Ausgangsspannungswert kippt von einem Zustand in den anderen. Wird der Wert der zweiten Schaltschwelle erreicht, ändert sich die Ausgangsspannung wiederum schlagartig zu dem alten Wert.
+Dies ermöglicht der Schaltung die Eigenschaften eines Schalters.
+Es ergibt sich eine rechteckige Form der Hysterese mit klar definierten Schaltwerten, siehe Abbildung \ref{abb:hysterese}.
+Der Schwellenwert ergibt sich zu
 \begin{equation}
 U_+=\frac{R_1}{R_\text{p}}U_\text{B}\,.
 \label{eq:schmitti}
@@ -155,4 +167,10 @@ Wird der Wert $U_+$ überschritten, springt $U_A$ auf den Wert $+U_B$; ebenfalls
   \includegraphics[width=0.45\textwidth]{bilder/schmitti.png}
   \caption{Schematische Darstellung eines Schmitt-Triggers mit den Mitkopplungswiderständen $R_1$ und $R_\text{p}$ \cite{anleitung}.}
   \label{schmitti}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.30\textwidth]{bilder/hysterese.png}
+  \caption{Schematische Darstellung der rechteckigen Schalthysterese eines Schmitt-Triggers \cite{hysterese}.}
+  \label{abb:hysterese}
 \end{figure}

@@ -19,6 +19,22 @@ V_log2 = np.absolute(V_log2)
 
 V_02 = np.mean(V_log2[:7])
 
+V_log20=V_log2[0]
+V_log21=V_log2[1]
+V_log22=V_log2[2]
+V_log23=V_log2[3]
+V_log24=V_log2[4]
+V_log25=V_log2[5]
+V_log26=V_log2[6]
+
+print(V_log20)
+print(V_log21)
+print(V_log22)
+print(V_log23)
+print(V_log24)
+print(V_log25)
+print(V_log26)
+
 print('V_02:',np.exp(V_02))
 print(V_02)
 # lineare Regression

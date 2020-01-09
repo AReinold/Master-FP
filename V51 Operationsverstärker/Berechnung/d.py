@@ -37,4 +37,4 @@ plt.legend()
 plt.savefig('diffe.pdf')
 #plt.xscale('log')
 #plt.yscale('log')
-plt.show()
+#

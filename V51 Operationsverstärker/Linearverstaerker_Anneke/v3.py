@@ -19,7 +19,20 @@ V_log3 = np.absolute(V_log3)
 V_03 = np.mean(V_log3[:4])
 
 print('V_03:',np.exp(V_03))
+
+V_log0=V_log3[0]
+V_log1=V_log3[1]
+V_log2=V_log3[2]
+V_log3=V_log3[3]
+#Mittelwert Formel ohne Funktion:
+print(V_log0)
+print(V_log1)
+print(V_log2)
+print(V_log3)
+
+
 print(V_03)
+
 # lineare Regression
 def fit(x, a, b):
     return x*a+b

@@ -19,6 +19,19 @@ V_log = np.log(Ua1/U_0)
 V_log = np.absolute(V_log)
 
 V_0 = np.mean(V_log[:6])
+V_log0=V_log[0]
+V_log1=V_log[1]
+V_log2=V_log[2]
+V_log3=V_log[3]
+V_log4=V_log[4]
+V_log5=V_log[5]
+#Mittelwert Formel ohne Funktion:
+print(V_log0)
+print(V_log1)
+print(V_log2)
+print(V_log3)
+print(V_log4)
+print(V_log5)
 
 print('V_0:',np.exp(V_0))
 print(V_0)
@@ -40,7 +53,7 @@ plt.plot(f_log[7:], V_log[7:], 'C2.', label='Messwerte des Verstärkungsverlaufs
 plt.plot(f_log[7:16], V_log[7:16], 'k.', label='ignorierte Messwerte')
 plt.plot(i, fit(i, *ParamsI), 'C0-', label='lineare Ausgleichsrechnung')
 #plt.ylim(4, 5)
-
+print(V_0)
 plt.xlabel(r"$ln(\nu)\:/\:ln$(Hz)")
 plt.ylabel(r"$ln(V')$")
 plt.legend(loc="best")
