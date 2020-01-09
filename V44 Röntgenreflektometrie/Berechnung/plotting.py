@@ -43,7 +43,7 @@ ax1.set_xlabel(r'Wellenvektorübertrag $\vec{q}_z\,[\frac{1}{\si{\angstrom}}]$',
 ax1.legend()
 plt.xlim(0,0.35)
 for i in range(501):
-    G=D*np.sin(winkel1[i])/0.0001044#<-Höhe des Strahls
+    G=D*np.sin(winkel1[i])/0.0001047#<-Höhe des Strahls
     if(winkel1[i]>0):
         if(winkel1[i]<g):
             counts1[i]=counts1[i]/(G)
@@ -56,10 +56,10 @@ print(counts3[0])  #1117270      #7570340.1
 #Parrat-Algo
 ########################################################################
 n1=1; #Luft
-n2=1-1.2e-6; #Schicht #<-Amplituden
-n3=1-7.05e-6; #Substrat#<- kritischer Winkel
+n2=1-1e-6; #Schicht #<-Amplituden
+n3=1-6.9e-6; #Substrat#<- kritischer Winkel
 #Rauigkeit
-sigma1=17.5e-10; #Schicht
+sigma1=15.5e-10; #Schicht
 
 sigma2=9.8e-10; #Substrat
 #Schichtdicke
