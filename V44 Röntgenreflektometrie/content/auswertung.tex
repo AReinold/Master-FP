@@ -4,7 +4,7 @@ Zur weiteren Auswertung der aufgenommenen Daten ist es zunächst notwendig die S
 \begin{equation}
   f(x)=a\cdot \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\,,
 \end{equation}
-gefittet und es wird die Halbwertsbreite bestimmt welche die Strahlhöhe gibt.
+gefittet und es wird die Halbwertsbreite bestimmt, welche die Strahlhöhe angibt.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{Bilder/fwhm.png}
@@ -14,11 +14,11 @@ Als Fitparameter ergeben sich
 \begin{align}
 a&=(1{,}109\pm0{,}005)\cdot10^6\nonumber\\
 \mu&=(-0{,}00026\pm0{,}00024)\,\si{\mm}\nonumber\\
-\sigma&=(0{,}0444\pm0{,}0003)\,\si{\mm}
+\sigma&=(0{,}0444\pm0{,}0003)\,\si{\mm}\,.
 \end{align}
 Die Strahlhöhe bestimmt sich zu
 \begin{equation}
-d_0=2\sqrt{2\ln2}\sigma=(0{,}1047\pm0{,}0006)\,\si{\mm}
+d_0=2\sqrt{2\ln2}\sigma=(0{,}1047\pm0{,}0006)\,\si{\mm}\,.
 \end{equation}\\
 \subsection{Berechnung des Geometriefaktors}
 Zur Bestimmung der Parameter der Probe ist es zunächst notwendig den Geometriefaktor $G$
@@ -36,9 +36,9 @@ zu berechnen. Hierbei ist $\upalpha_i$ der Einfallswinkel der Strahlung auf die 
 \end{equation}
 mit dem Probendurchmesser $D$.
 Der Geometriewinkel wird während des Justierens bestimmt und ist in diesem Fall $\upalpha_G=0.5717°$.
-Mit (\ref{eq:winkel}) bestimmt sich der Probendurchmesser zu $D=10{,}49\si{\mm}$\\
+Mit \eqref{eq:winkel} bestimmt sich der Probendurchmesser zu $D=10{,}49\si{\mm}$.\\
 Durch Teilen der Messwerte durch den Geometriefaktor wird berücksichtigt, dass erst ab ausreichend großen Winkeln der gesamte Strahl die Probe trifft. Messwerte für sehr flache Winkel werden ausgelassen, da hierbei die Strahlung noch direkt in den Detektor treffen kann.\\
-Zur Aufbereitung der Daten werden außerdem die Messdaten der Diffusionsmessung von denen der direkten Reflektionsmessung abgezogen. Zum Darstellen der aufgenommenen Messwerte werden die aufgenommenen Daten gegen den Wellenvektorübertrag $q_z=\frac{4\pii}{\lambda}\sin(\upalpha_i)$ aufgetragen. Hierbei ist $\lambda$ die Strahlungswellenlänge von $1{,}54\cdot10^{-10}\,\si{\m}$. Die Ergebnisse sind in Abb.\ref{Plot1} zu sehen.
+Zur Aufbereitung der Daten werden außerdem die Messdaten der Diffusionsmessung von denen der direkten Reflektionsmessung abgezogen. Zum Darstellen der Messwerte werden die aufgenommenen Daten gegen den Wellenvektorübertrag $q_z=\frac{4\pii}{\lambda}\sin(\upalpha_i)$ aufgetragen. Hierbei ist $\lambda$ die Strahlungswellenlänge von $1{,}54\cdot10^{-10}\,\si{\m}$. Die Ergebnisse sind in Abbildung \ref{Plot1} zu sehen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Berechnung/Plot3.png}
@@ -55,7 +55,7 @@ Zur Bestimmung der Probenparameter wird der Parratt-Algorithmus genutzt, um eine
   \text{Rauigkeit Substrat}:&\quad \upsigma_\text{Substrat}=9,8\cdot10^{-10} \nonumber\\
   \text{Schichtdicke}:&\quad z=873\,\si{\angstrom}\nonumber
 \end{align}
-Die Kurve der korrigierten und normierten Messwerte sowie die des Parratt-Algorithmus sind in Abb.\ref{fit} dargestellt.
+Die Kurve der korrigierten und normierten Messwerte sowie die des Parratt-Algorithmus sind in Abbildung \ref{fit} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Berechnung/Fit2.png}
