@@ -15,9 +15,9 @@ g=(g1+g2)/2
 winkel1, counts1 = np.genfromtxt('reflekscan1.uxd', unpack = True)
 #Diffscan
 winkel2, counts2 = np.genfromtxt('diffscan1.uxd', unpack = True)
-norm=counts1[0]
-counts1=counts1/norm
-counts2=counts2/norm
+#norm=counts1[2]
+#counts1=counts1/norm
+#counts2=counts2/norm
 #Konvertierung auf rad:
 winkel1= winkel1*math.pi/180
 #Probendurchmesser:
@@ -28,26 +28,30 @@ print(g)
 #Bereinigung
 print('NOOT:')
 print(counts1[0])
-winkel3, counts3 = winkel1, counts1-counts2
 #Konvertierung auf Wellenvektorübertrag
+winkel3, counts3 = winkel1, counts1-counts2
 qz_1=4*math.pi/1.54*np.sin(winkel3)
 #Erster Plot
 print(counts2[0])
-fig1, ax1 = plt.subplots()
-ax1.plot(qz_1, counts1,'r',label='Messwerte')
-ax1.plot(qz_1, counts3,'g',label='Korrigierte Messwerte')
-ax1.plot(qz_1, counts2,'b',label='Diffuser Scan')
-ax1.set_yscale('log')
-ax1.set_ylabel('Intensität',fontsize = 12)
-ax1.set_xlabel(r'Wellenvektorübertrag $\vec{q}_z\,[\frac{1}{\si{\angstrom}}]$',fontsize = 12)
-ax1.legend()
-plt.xlim(0,0.35)
 for i in range(501):
     G=D*np.sin(winkel1[i])/0.0001047#<-Höhe des Strahls
     if(winkel1[i]>0):
         if(winkel1[i]<g):
             counts1[i]=counts1[i]/(G)
             counts2[i]=counts2[i]/(G)
+norm=counts1[1]
+counts1=counts1/norm
+counts2=counts2/norm
+counts3 = counts1-counts2
+fig1, ax1 = plt.subplots()
+ax1.plot(qz_1[1:500], counts1[1:500],'r',label='Messwerte')
+ax1.plot(qz_1[1:500], counts3[1:500],'g',label='Korrigierte Messwerte')
+ax1.plot(qz_1[1:500], counts2[1:500],'b',label='Diffuser Scan')
+ax1.set_yscale('log')
+ax1.set_ylabel('Intensität',fontsize = 12)
+ax1.set_xlabel(r'Wellenvektorübertrag $\vec{q}_z\,[\frac{1}{\si{\angstrom}}]$',fontsize = 12)
+ax1.legend()
+plt.xlim(0,0.35)
 winkel3, counts3 = winkel1, counts1-counts2
 #janky "Normierung"
 norm2=counts3[25]
