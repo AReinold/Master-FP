@@ -21,7 +21,7 @@ gth3 = 0.5
 B_Blau=1060e-3
 muB = 9.274009994e-24
 
-deltaLambdaBlau=0.5*83.29 / 100.8 * DeltaLambdaBlau
+deltaLambdaBlau=0.5*35.2 / 100.8 * DeltaLambdaBlau
 
 g_Blau = (hquer * c0 *deltaLambdaBlau)/(LambdaBlau**2 *muB *B_Blau)
 print('delta lambda Blau: ',deltaLambdaBlau,'\ng_Blau: ',g_Blau)
